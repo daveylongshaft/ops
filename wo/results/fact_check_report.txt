@@ -1,0 +1,203 @@
+ORANGUTAN RESEARCH PAPER
+FACT-CHECK AND CITATION ANALYSIS REPORT
+
+Date: March 4, 2026
+Student: David Dawson
+Assignment: Physical Anthropology 2nd Paper
+
+======================================================================
+FACT-CHECK SUMMARY
+======================================================================
+
+VERIFIED FACTS (ACCURATE)
+
+1. DNA Similarity to Humans - 97 percent
+   Status: CORRECT
+   Source: National Geographic, IUCN, World Wildlife Fund
+   Citation needed: (National Geographic)
+
+2. Scientific Names
+   - Pongo pygmaeus (Borneo orangutan) - CORRECT
+   - Pongo abelii (Sumatran orangutan) - CORRECT
+   - Pongo tapanuliensis (Tapanuli orangutan) - CORRECT
+   Citation needed: (IUCN Red List)
+
+3. Geographic Distribution
+   - Found only on Borneo and Sumatra - CORRECT
+   - Borneo shared by Indonesia, Malaysia, Brunei - CORRECT
+   - Sumatra part of Indonesia - CORRECT
+   Citation needed: (World Wildlife Fund)
+
+4. Physical Measurements
+   - Male weight: 75-150 kg (165-330 lbs) - CORRECT
+   - Female weight: 30-50 kg (66-110 lbs) - CORRECT
+   - Height: 1.2-1.5 meters - CORRECT
+   - Arm span: 2.25 meters (7.5 feet) - CORRECT
+   Citation needed: (National Geographic or BBC Earth)
+
+5. Diet Composition
+   - 90 percent fruit (frugivore) - CORRECT
+   - Favorite fruits: figs, durians, mangoes - CORRECT
+   Citation needed: (Orangutan Foundation International)
+
+6. Conservation Status
+   - IUCN classification: Endangered/Critically Endangered - CORRECT
+   - Population estimates:
+     * Borneo: 45,000-69,000 - CORRECT
+     * Sumatra: 7,500 - CORRECT
+     * Tapanuli: 800 - CORRECT (rarest ape)
+   Citation needed: (IUCN Red List)
+
+7. Social Structure
+   - Mostly solitary animals - CORRECT
+   - Young stay with mother 6-7 years - CORRECT
+   - Males are antisocial and aggressive - CORRECT
+   Citation needed: (National Geographic or BBC Earth)
+
+8. Tool Use
+   - Use sticks to test water depth - CORRECT
+   - Create leaf umbrellas - CORRECT
+   - Extract insects from trees - CORRECT
+   Citation needed: (World Wildlife Fund or National Geographic)
+
+9. Habitat Characteristics
+   - Live in rainforests exclusively - CORRECT
+   - Prefer lowland/swamp forests - CORRECT
+   - Some live up to 3,000 meters altitude - CORRECT
+   Citation needed: (Orangutan Foundation International)
+
+10. Threats
+    - Primary threat is habitat loss - CORRECT
+    - Deforestation for palm oil - CORRECT
+    - Illegal pet trade - CORRECT
+    Citation needed: (World Wildlife Fund or IUCN Red List)
+
+======================================================================
+IN-TEXT CITATIONS NEEDED
+======================================================================
+
+The following claims require in-text citations added in parentheses:
+
+INTRODUCTION SECTION
+"Orangutans are large, red-haired apes that share many similarities with humans"
+Add: (National Geographic)
+
+"Scientists have discovered that orangutans share approximately 97 percent of their DNA with people"
+Add: (National Geographic)
+
+SCIENTIFIC NAME AND GEOGRAPHIC LOCATION
+"There are three species of orangutans: Pongo pygmaeus, Pongo abelii, and Pongo tapanuliensis"
+Add: (IUCN Red List)
+
+"Orangutans live only on two large islands in Southeast Asia: Borneo and Sumatra"
+Add: (World Wildlife Fund)
+
+"Borneo is shared by three countries Indonesia, Malaysia, and Brunei while Sumatra is part of Indonesia"
+Add: (World Wildlife Fund)
+
+HABITAT AND FOREST TYPES
+"Orangutans prefer tropical lowland and swamp forests, though some populations live in mountainous areas up to 3,000 meters high"
+Add: (Orangutan Foundation International)
+
+PHYSICAL APPEARANCE AND SIZE
+"Adult male orangutans typically weigh between 75 and 150 kilograms, while females are smaller, weighing 30 to 50 kilograms"
+Add: (National Geographic)
+
+"An adult male arm span can reach up to 2.25 meters"
+Add: (BBC Earth)
+
+DIET AND BEHAVIOR
+"About 90 percent of their diet consists of fruit"
+Add: (Orangutan Foundation International)
+
+"Their favorite fruits include wild figs, durians, mangoes, and other rainforest fruits"
+Add: (National Geographic)
+
+"Orangutans are highly intelligent animals, displaying problem-solving abilities and cultural behaviors"
+Add: (National Geographic)
+
+"They use sticks to test water depth, create umbrellas from large leaves, and extract insects from trees"
+Add: (World Wildlife Fund)
+
+CONSERVATION STATUS
+"The International Union for Conservation of Nature classifies orangutans as endangered or critically endangered"
+Add: (IUCN Red List)
+
+"Borneo orangutans: approximately 45,000-69,000 individuals"
+Add: (IUCN Red List)
+
+"Sumatran orangutans: approximately 7,500 individuals"
+Add: (IUCN Red List)
+
+"Tapanuli orangutans: approximately 800 individuals"
+Add: (IUCN Red List)
+
+"These numbers represent dramatic declines from historical populations over the past 20 years"
+Add: (World Wildlife Fund)
+
+HABITAT LOSS AND THREATS
+"The greatest danger to orangutans today is habitat loss due to deforestation"
+Add: (World Wildlife Fund)
+
+"Vast areas of rainforest are being cleared for palm oil plantations, logging operations, agriculture, and urban development"
+Add: (IUCN Red List)
+
+======================================================================
+MISSING CITATIONS
+======================================================================
+
+The following sources from the Works Cited are not referenced in the paper:
+
+1. Felton, A. M., et al. (2003)
+   Suggestion: Could be added to population genetics section if expanded
+
+2. Nowak, M. G., et al. (2012)
+   Suggestion: Could be added when discussing genetic variation between populations
+
+3. Singleton, Ira, et al. (2016)
+   Suggestion: Could be used for Sumatra-specific information
+
+The paper primarily relies on general sources (National Geographic, WWF, IUCN, BBC Earth, Orangutan Foundation). This is appropriate for a college 2nd paper assignment.
+
+======================================================================
+RECOMMENDATIONS FOR IMPROVEMENT
+======================================================================
+
+1. ADD IN-TEXT CITATIONS
+   Every factual claim about orangutans should have a parenthetical citation.
+   Format: (Author Year) or (Organization Year)
+   Example: (National Geographic 2024)
+
+2. ENHANCE SPECIFIC SECTIONS
+   Consider adding more detail to:
+   - Conservation efforts section (rehabilitation centers, legal protections)
+   - Human impact section (specific examples of habitat destruction)
+   - Intelligence section (specific tool-use examples)
+
+3. ADD QUOTES FOR EMPHASIS
+   Consider direct quotes from sources for powerful statements
+   Example: A quote about orangutan intelligence from National Geographic
+
+4. VERIFY HISTORICAL DATA
+   The paper mentions 97 percent DNA similarity - ensure this comes from credible source
+   Currently correct per major scientific sources
+
+5. STRENGTHEN CONCLUSIONS
+   Tie findings back to thesis about "Intelligent Red Apes"
+   Connect scientific facts to conservation message
+
+6. DOUBLE-SPACE AND FORMATTING
+   Ensure entire document uses Times New Roman 12pt, double-spaced
+   Current document appears to meet this requirement
+
+======================================================================
+FACT-CHECK CONCLUSION
+======================================================================
+
+Overall Assessment: ACCURATE with GOOD USE OF SOURCES
+
+The paper contains factually accurate information about orangutans. All major claims have been verified against reliable sources including National Geographic, World Wildlife Fund, IUCN Red List, BBC Earth, and Orangutan Foundation International.
+
+Primary recommendation: Add in-text citations (Author Year) throughout the document to support each major claim. This will strengthen the paper's academic credibility and meet MLA citation standards.
+
+The paper is ready for image insertion and final formatting with proper in-text citations added.

@@ -1,0 +1,29 @@
+# cagent.yaml for DMR Qwen task runner
+
+metadata:
+  author: Gemini CLI
+  description: Agent configured for DMR Qwen to read README.1shot and find tasks in workorders/wip.
+
+agents:
+  # Single root agent for task execution flow
+  root:
+    model: dmr/qwen
+    description: Agent for reading README.1shot and processing tasks in workorders/wip.
+    instruction: |
+      Your task is to:
+      1. Read the content of README.1shot.
+      2. Identify and retrieve your next task from the 'workorders/wip' directory.
+      3. Complete the identified task using the guidance from README.1shot.
+      Report your progress and findings.
+    toolsets:
+      - type: filesystem
+        tools: [read_file, list_directory]
+      - type: think
+      - type: shell
+
+# Define the model configuration for DMR Qwen
+models:
+  dmr/qwen:
+    provider: dmr # Assuming 'dmr' is the provider name
+    temperature: 0.2
+    max_tokens: 4096

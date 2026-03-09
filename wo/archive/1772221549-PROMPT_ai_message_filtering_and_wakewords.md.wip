@@ -1,0 +1,19 @@
+PID: 828170 starting at Thu 19 Feb 2026 07:23:37 PM GMT
+spawning opus agent to implement wakeword system
+PID: 828305 starting at Thu 19 Feb 2026 07:24:10 PM GMT
+reading code maps: csc-server.txt, csc-shared.txt, services.txt
+reading server.py, server_message_handler.py, service.py, storage.py
+reading existing service pattern (agent_service.py)
+reading existing test for pattern (test_nickserv_service.py)
+planning implementation approach
+creating wakeword_service.py in packages/csc-shared/services/
+modifying server.py: add wakewords property
+modifying server_message_handler.py: add WAKEWORD to dispatch, handle_wakeword, modify _handle_privmsg
+writing tests/test_wakeword.py
+verifying changes - reading back modified files
+verifying Python syntax
+git add and commit
+moving prompts to done
+
+
+DEAD END - Stale test/reference file

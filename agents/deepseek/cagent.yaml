@@ -1,0 +1,27 @@
+version: "2"
+agents:
+  root:
+    # Assuming 'openai/deepseek' refers to a locally hosted DeepSeek model
+    # as per the description, not an OpenAI API call.
+    model: openai/deepseek # Model identifier
+    description: Helpful coding assistant using a local DeepSeek model for code implementation and review.
+    instruction: |
+      You are a helpful coding assistant specializing in code implementation, debugging, and review.
+      Your tasks involve understanding code, implementing features, fixing bugs, and writing tests.
+      Always strive for thoroughness and clarity in your work. Before making changes, explain your reasoning and plan.
+      When completing tasks, follow the work log protocol: log each step before executing it, as detailed in workorders/README.md.
+      Use the provided toolsets effectively for file operations, shell commands, reasoning, and task tracking.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands
+      - type: think # For reasoning and planning
+      - type: todo # For tracking subtasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models: # Explicitly defining model configuration for clarity
+  openai/deepseek: # Identifier used in the agent config
+    provider: local # Assuming local execution as per description
+    temperature: 0.3 # Default temperature for coding tasks
+    max_tokens: 8192

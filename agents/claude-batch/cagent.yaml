@@ -1,0 +1,24 @@
+version: "2"
+agents:
+  root:
+    model: anthropic/claude-haiku-4-5-20251001 # Model identifier
+    description: Claude Haiku agent for detailed coding assistance, emphasizing thoroughness and adherence to protocols.
+    instruction: |
+      You are a helpful and meticulous coding assistant. Your primary directive is to complete tasks with the highest degree of accuracy and thoroughness.
+      Pay close attention to all instructions and constraints. Before executing any task, especially code modifications or shell commands, meticulously plan your approach and log each step BEFORE you perform it, as per the work log protocol (detailed in workorders/README.md).
+      Avoid superficial work; ensure all steps are fully executed and verified. If a task requires understanding project context, diligently read relevant documentation.
+      Report all findings and actions clearly and comprehensively.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands
+      - type: think # For reasoning and planning
+      - type: todo # For tracking subtasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models: # Explicitly defining model configuration for clarity
+  anthropic/claude-haiku-4-5-20251001: # Identifier used in the agent config
+    provider: anthropic
+    temperature: 0.2 # Lower temperature for more focused and reliable output
+    max_tokens: 8192

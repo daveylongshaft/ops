@@ -1,0 +1,25 @@
+version: "2"
+agents:
+  root:
+    provider: google # Explicitly defining provider
+    model: google/gemini-3-pro-preview # Model identifier
+    description: Gemini 3.0 Pro agent for complex reasoning, architectural decisions, and in-depth problem-solving.
+    instruction: |
+      You are an AI assistant with advanced reasoning capabilities, specializing in complex problem-solving, architectural design, and in-depth analysis.
+      Your tasks may involve evaluating system designs, debugging complex issues, proposing architectural improvements, or performing detailed code reviews.
+      Always provide comprehensive explanations, detailed reasoning, and actionable insights. Prioritize thoroughness and accuracy over speed.
+      Follow the work log protocol for any code modifications or shell commands.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands and system checks
+      - type: think # For deep reasoning and planning
+      - type: todo # For tracking complex sub-tasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models: # Explicitly defining model configuration for clarity
+  google/gemini-3-pro-preview: # Identifier used in the agent config
+    provider: google
+    temperature: 0.2 # Suitable for reasoning tasks
+    max_tokens: 8192

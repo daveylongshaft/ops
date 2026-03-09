@@ -1,0 +1,13 @@
+version: "2"
+agents:
+  root:
+    model: google/gemini-2.5-flash-lite
+    description: Gemini 2.5 Flash Lite agent
+    instruction: |
+      You are a helpful assistant. Follow the work log protocol:
+      echo your plan to workorders/wip/FILENAME.md BEFORE you act.
+    toolsets:
+      - type: filesystem
+        tools: [read_file, write_file, list_directory, search_files]
+      - type: shell
+      - type: think

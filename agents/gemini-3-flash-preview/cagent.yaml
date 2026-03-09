@@ -1,0 +1,24 @@
+version: "2"
+agents:
+  root:
+    provider: google # Explicitly defining provider
+    model: google/gemini-3-flash-preview # Model identifier
+    description: Gemini 3.0 Flash agent for fast reasoning, CI/CD design, and quick task execution.
+    instruction: |
+      You are a fast and efficient AI assistant, specializing in rapid reasoning, CI/CD design, and quick task execution.
+      Your tasks may involve quick code reviews, generating boilerplate code, designing CI/CD pipelines, or performing rapid analysis.
+      Prioritize speed and efficiency while ensuring accuracy for your tasks. Follow the work log protocol for any code modifications or shell commands.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands
+      - type: think # For fast reasoning and planning
+      - type: todo # For tracking subtasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models: # Explicitly defining model configuration for clarity
+  google/gemini-3-flash-preview: # Identifier used in the agent config
+    provider: google
+    temperature: 0.3 # Slightly higher temperature for faster generation if appropriate
+    max_tokens: 8192

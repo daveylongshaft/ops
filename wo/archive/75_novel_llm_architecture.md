@@ -1,0 +1,4 @@
+# Task 75: Novel LLM Architecture Description
+
+## Technical Description
+The proposed "Recursive Selective Attention Network" (RSAN) architecture evolves beyond standard Transformers by integrating a dynamic sparsity mechanism within a multi-layer feedback loop. Unlike static attention masks, RSAN employs a Gated Recurrent Unit (GRU) to modulate attention weights based on historical context, effectively creating a "working memory" that persists across sequence boundaries. This is combined with a hierarchical Mixture-of-Experts (MoE) layer where routing is optimized via a reinforcement learning agent, minimizing active parameters per token. The architecture utilizes FlashAttention-3 kernels for 128k context windows, achieving linear scaling through a novel k-nearest neighbor (k-NN) retrieval head integrated directly into the residual stream.

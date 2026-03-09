@@ -1,0 +1,53 @@
+{
+  "agent": "generic-agent",
+  "description": "Simple, focused task agent - understands codebase via maps, doesn't need orchestration awareness",
+  "model": "qwen:7b",
+  "created": "2026-02-21T20:15:00Z",
+
+  "characteristics": [
+    "Single focused task",
+    "Code maps for codebase understanding",
+    "Self-contained work (doesn't coordinate with system)",
+    "Journals into prompt file",
+    "Wrapper handles post-work (git, maps refresh)"
+  ],
+
+  "capabilities": [
+    "Read code maps (INDEX.txt, tree.txt, p-files.list)",
+    "Navigate and understand codebase",
+    "Perform analysis or code generation",
+    "Read/modify source files",
+    "Create documentation",
+    "Write tests",
+    "Journal work steps"
+  ],
+
+  "constraints": [
+    "NO git operations",
+    "NO running tests",
+    "NO refreshing maps",
+    "NO orchestration knowledge needed",
+    "ONE task at a time"
+  ],
+
+  "example_tasks": [
+    "Code review",
+    "Documentation generation",
+    "Code analysis and reporting",
+    "Test coverage analysis",
+    "Dependency checking",
+    "Security scanning",
+    "Platform compatibility checking"
+  ],
+
+  "prompt_interaction": {
+    "input": "prompts/wip/*.md (prompt file with task description)",
+    "context": "tools/INDEX.txt, tree.txt, p-files.list, tests.txt",
+    "output": "Modified source files + updated prompt file work log + COMPLETE marker",
+    "wrapper_handles": ["refresh-maps", "git add/commit/push", "file movement"]
+  },
+
+  "tasks_processed": 0,
+  "tasks_failed": 0,
+  "status": "initialized"
+}

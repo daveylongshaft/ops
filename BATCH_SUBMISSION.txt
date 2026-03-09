@@ -1,0 +1,49 @@
+# Batch Submission Record
+
+**Batch ID:** msgbatch_01AMX2P8FhMUfkxH3Re9U7ua
+**Status:** in_progress
+**Submitted:** 2026-02-27 21:10:57 UTC
+**Expires:** 2026-02-28 21:10:57 UTC (24 hours)
+
+## Summary
+- **Total Requests:** 19
+- **Processing:** 19
+- **Succeeded:** 0
+- **Errored:** 0
+
+## Workorders Included (4 code fixes + 15 test fixes)
+
+### Code Fixes
+1. PROMPT_fix_dh_encryption_20260226170107_20260226170250_20260226170500_20260226172022_20260226211051_20260226212037_20260226214233.md
+2. PROMPT_fix_persistence_channel_modes_20260226172441_20260226211055_20260226212041.md
+3. PROMPT_fix_persistence_nickserv_mock_20260226211059.md
+4. PROMPT_fix_platform_cli_flags.md
+
+### Test Fixes (15)
+- PROMPT_fix_test_agent_separate_repo.md
+- PROMPT_fix_test_botserv_logread.md
+- PROMPT_fix_test_botserv_logs.md
+- PROMPT_fix_test_builtin_service.md
+- PROMPT_fix_test_client_readline.md
+- PROMPT_fix_test_coding_agent.md
+- PROMPT_fix_test_cryptserv_service.md
+- PROMPT_fix_test_csc_ctl.md
+- PROMPT_fix_test_integration.md
+- PROMPT_fix_test_nickserv.md
+- PROMPT_fix_test_persistence.md
+- PROMPT_fix_test_remote_execution.md
+- PROMPT_fix_test_server_irc.md
+- PROMPT_fix_test_storage_manager.md
+- PROMPT_fix_test_topic_command.md
+
+## Cost Estimate
+- Model: claude-haiku-4-5-20251001
+- Max tokens: 4096
+- System instruction caching: Enabled (50% cost reduction on system tokens)
+- Estimated cost: ~$0.15-0.30 for batch
+
+## Next Steps
+1. Monitor batch status with: python cbatch_status.py msgbatch_01AMX2P8FhMUfkxH3Re9U7ua
+2. Once complete (usually 1-2 hours), retrieve results with: python cbatch_retrieve.py msgbatch_01AMX2P8FhMUfkxH3Re9U7ua
+3. Process results and move workorders to done/ or ready/ based on status
+4. Clean up batch/ directory when complete

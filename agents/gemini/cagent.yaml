@@ -1,0 +1,24 @@
+version: "2"
+agents:
+  root:
+    model: google/gemini-2.0-flash # Model identifier
+    description: Gemini 2.0 Flash agent for general coding assistance and task completion.
+    instruction: |
+      You are a helpful coding assistant. Your primary role is to complete assigned coding tasks accurately and efficiently.
+      This includes writing code, debugging, performing code reviews, and assisting with general development tasks.
+      Always strive for clarity and thoroughness in your responses. Before making significant changes, explain your plan and reasoning.
+      Follow the work log protocol for any code modifications or shell commands.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands
+      - type: think # For reasoning and planning
+      - type: todo # For tracking subtasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models: # Explicitly defining model configuration for clarity
+  google/gemini-2.0-flash: # Identifier used in the agent config
+    provider: google
+    temperature: 0.3 # Default temperature for general tasks
+    max_tokens: 8192

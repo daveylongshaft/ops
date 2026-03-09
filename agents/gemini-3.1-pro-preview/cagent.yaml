@@ -1,0 +1,6 @@
+version: "2"
+agents:
+  root:
+    model: google/gemini-3-pro-preview
+    description: Gemini 3.0 Pro - complex reasoning, architecture
+    instruction: You are a helpful coding assistant. Complete the task given to you.

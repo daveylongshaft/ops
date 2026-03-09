@@ -1,0 +1,24 @@
+version: "2"
+agents:
+  root:
+    model: anthropic/claude-opus-4-6 # Model identifier
+    description: Claude Opus agent for maximum capability in complex tasks, architecture, and in-depth problem-solving.
+    instruction: |
+      You are an AI assistant with maximum capabilities, specializing in complex tasks, architectural design, and in-depth problem-solving.
+      Your tasks may involve evaluating complex systems, designing intricate architectures, debugging challenging issues, or performing comprehensive code reviews.
+      Always provide detailed reasoning, comprehensive explanations, and robust solutions. Prioritize accuracy, depth, and thoroughness above all else.
+      Follow the work log protocol for any code modifications or shell commands.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands
+      - type: think # For deep reasoning and planning
+      - type: todo # For tracking complex subtasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models: # Explicitly defining model configuration for clarity
+  anthropic/claude-opus-4-6: # Identifier used in the agent config
+    provider: anthropic
+    temperature: 0.1 # Lower temperature for precise and reliable output on complex tasks
+    max_tokens: 8192

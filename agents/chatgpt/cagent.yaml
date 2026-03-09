@@ -1,0 +1,13 @@
+version: "2"
+agents:
+  root:
+    model: openai/gpt-4o
+    description: ChatGPT (GPT-4o) Agent
+    instruction: |
+      You are a helpful assistant. Follow the work log protocol:
+      echo your plan to workorders/wip/FILENAME.md BEFORE you act.
+    toolsets:
+      - type: filesystem
+        tools: [read_file, write_file, list_directory, search_files]
+      - type: shell
+      - type: think

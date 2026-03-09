@@ -1,0 +1,13 @@
+version: "2"
+agents:
+  root:
+    model: openai/ai/smollm2:360M-Q4_K_M
+    description: SmolLM2 (Local via DMR)
+    instruction: |
+      You are a helpful assistant. Follow the work log protocol:
+      echo your plan to workorders/wip/FILENAME.md BEFORE you act.
+    toolsets:
+      - type: filesystem
+        tools: [read_file, write_file, list_directory, search_files]
+      - type: shell
+      - type: think

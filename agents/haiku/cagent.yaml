@@ -1,0 +1,24 @@
+version: "2"
+agents:
+  root:
+    model: anthropic/claude-haiku-4-5-20251001 # Model identifier
+    description: Claude Haiku agent for fast, lightweight tasks and quick analysis.
+    instruction: |
+      You are an AI assistant optimized for speed and efficiency, specializing in fast, lightweight tasks and quick analysis.
+      Your tasks may involve rapid code generation, simple validation, or providing brief summaries.
+      Prioritize speed and efficiency. Log your actions concisely and avoid overly complex operations.
+    toolsets:
+      - type: filesystem # For reading, writing, and manipulating files
+        tools: [read_file, write_file, list_directory]
+      - type: shell # For executing commands
+      - type: think # For fast reasoning
+      - type: todo # For tracking subtasks
+        shared: true
+      - type: memory # For remembering context
+        path: ./memory.db
+models:
+  anthropic/claude-haiku-4-5-20251001:
+    provider: anthropic
+    model: claude-haiku-4-5-20251001
+    temperature: 0.3
+    max_tokens: 4096

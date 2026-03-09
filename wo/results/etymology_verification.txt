@@ -1,0 +1,89 @@
+ORANGUTAN ETYMOLOGY FACT-CHECK
+
+CONTRADICTION FOUND:
+Document contains TWO conflicting claims:
+
+1. "The name 'orangutan' comes from two Malay words meaning 'person of the forest'"
+2. "The word 'orang' actually refers to their distinctive coloring"
+
+These statements are MUTUALLY EXCLUSIVE and cannot both be true.
+
+======================================================================
+VERIFIED ETYMOLOGY (STANDARD SOURCES)
+======================================================================
+
+CORRECT DEFINITION:
+
+Orangutan comes from Malay/Indonesian words:
+- "Orang" = person, people, human
+- "Hutan" = forest, woods
+
+Combined: "Orangutan" = "Person of the Forest"
+
+SOURCES FOR THIS DEFINITION:
+- National Geographic uses this definition
+- World Wildlife Fund uses this definition
+- Oxford English Dictionary recognizes this etymology
+- Most academic sources cite this meaning
+
+ALTERNATIVE THEORY (LESS COMMON):
+Some sources suggest "orang" can mean "red" in certain Malay dialects,
+potentially referring to their reddish coloring. However, this is NOT
+the standard or most widely accepted etymology.
+
+STATUS OF SECOND CLAIM:
+The statement "The word 'orang' actually refers to their distinctive
+coloring" is UNSUPPORTED and contradicts the standard etymology.
+
+======================================================================
+RECOMMENDATION
+======================================================================
+
+OPTION 1: KEEP CORRECT VERSION ONLY
+Remove the contradictory statement entirely.
+Keep: "The name 'orangutan' comes from two Malay words: 'orang'
+(person) and 'hutan' (forest), meaning 'person of the forest.'"
+
+OPTION 2: ADD CLARIFICATION
+Keep correct definition and note the color theory as a minority view:
+"The name 'orangutan' comes from the Malay words 'orang' (person)
+and 'hutan' (forest), meaning 'person of the forest.' Some sources
+suggest 'orang' may refer to their reddish coloring, though this
+etymology is less widely accepted."
+
+RECOMMENDED ACTION: OPTION 1
+Remove the contradictory statement to maintain academic integrity.
+
+======================================================================
+WHY FACT-CHECK MISSED THIS
+======================================================================
+
+The manual fact-check I provided had a limitation:
+- It was based on standard, commonly known facts about orangutans
+- The etymology claim passes basic fact-checking (it IS correct)
+- The contradictory second statement appeared as clarifying detail
+- I did not perform FULL CONTRADICTION DETECTION across all sentences
+- A proper AI fact-check would have flagged this internal contradiction
+
+This should have been caught. User was correct to identify it.
+
+======================================================================
+CORRECTED DOCUMENT TEXT
+======================================================================
+
+ORIGINAL (WITH CONTRADICTION):
+"The name 'orangutan' comes from two Malay words meaning 'person of
+the forest.' The word 'orang' actually refers to their distinctive
+coloring."
+
+CORRECTED:
+"The name 'orangutan' comes from two Malay words: 'orang' meaning
+person and 'hutan' meaning forest. Together they mean 'person of
+the forest.'"
+
+This version:
+- Defines both component words clearly
+- Explains the combination
+- Contains no contradictions
+- Is academically accurate
+- Cites no disputed etymology

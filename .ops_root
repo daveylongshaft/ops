@@ -1,0 +1,8 @@
+# Ops subtree root marker
+# Contains operations, deployment, and infrastructure configs.
+#
+# This is a subtree of the csc repo. Commit from /opt/csc (parent).
+#
+# Git commands (from /opt/csc):
+#   git add ops/ && git commit -m "ops: description"
+#   git push origin main
