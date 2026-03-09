@@ -117,6 +117,10 @@ Add to `etc/platform.json` under `"runtime"`:
 - inotify is preferred on Linux; polling is the fallback — support both
 - Watcher runs as a csc-ctl managed service, not a cron job
 - No Task Scheduler on Windows — use threading + polling there
+- Port 9521 is the CSC FTP control port (CSC uses 9520-9529 range)
+- Must work on Windows, Linux, and macOS — use `platform.system()` to branch where needed
+- `inotify` is Linux-only; Windows uses polling via `threading.Timer` loop; macOS uses `watchdog` or polling
+- `hasattr(os, 'mkfifo')` pattern for any POSIX-only calls
 - Write tests, do not run them
 
 ## Files To Create
