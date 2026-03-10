@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-10T23:02:16Z",
-    "agent_name": "opus",
-    "workorder_name": "EVOLUTION_MD_write_origin_story.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/EVOLUTION_MD_write_origin_story.md",
+    "timestamp": "2026-03-10T23:05:59Z",
+    "agent_name": "gemini-2.5-pro",
+    "workorder_name": "claude-evolution-story.md",
+    "original_prompt_path": "/opt/csc/ops/wo/ready/claude-evolution-story.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
