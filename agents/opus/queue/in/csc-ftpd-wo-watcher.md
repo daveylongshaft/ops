@@ -181,3 +181,29 @@ SyntaxError: Unexpected string
 Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
 
 INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+
+
+--- Agent Log ---
+Invoking: gemini -y -m gemini-2.5-pro -p " "
+/usr/local/lib/node_modules/@google/gemini-cli/dist/index.js:7
+import './src/gemini.js';
+       ^^^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected string
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:623:3)
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/gemini-2.5-pro_1773106893.log
+
+
+--- Verify/Complete or Finish ---
+Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
