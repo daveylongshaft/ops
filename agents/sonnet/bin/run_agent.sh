@@ -92,19 +92,15 @@ else
 fi
 LOG_FILE="$LOGS_DIR/${AGENT_NAME}_$(date +%s).log"
 
-# Compute temp repo relative path for template substitution
+# Temp repo path (absolute) — agent runs from /opt, both /opt/clones and /opt/csc are in scope
 WORK_DIR="${CSC_AGENT_REPO:-}"
-if [ -n "$WORK_DIR" ]; then
-  AGENT_REPO_REL="${WORK_DIR#$CSC_ROOT/}"
-else
-  AGENT_REPO_REL="(no temp repo)"
-fi
+AGENT_REPO_ABS="${WORK_DIR:-(no temp repo)}"
 
 # Build prompt with placeholder substitution
 TEMPLATE_CONTENT=$(cat "$TEMPLATE")
 WORKORDER_CONTENT=$(cat "$WORKORDER_PATH")
 FULL_PROMPT=$(printf '%s\n\n%s' "$TEMPLATE_CONTENT" "$WORKORDER_CONTENT" \
-  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_REL|g")
+  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_ABS|g")
 
 # Find Claude binary
 AGENT_BIN=$(command -v claude 2>/dev/null || echo "")
@@ -116,9 +112,9 @@ if [ -z "$AGENT_BIN" ]; then
   exit 1
 fi
 
-# Run from CSC_ROOT so both the temp repo and WO are in workspace
-echo "Invoking: $AGENT_BIN --dangerously-skip-permissions --model $MODEL -p - (cwd: $CSC_ROOT, repo: $AGENT_REPO_REL)"
-cd "$CSC_ROOT"
+# Run from /opt so both /opt/clones (code repo) and /opt/csc (WO) are accessible
+echo "Invoking: $AGENT_BIN --dangerously-skip-permissions --model $MODEL -p - (cwd: /opt, repo: $AGENT_REPO_ABS)"
+cd /opt
 echo "$FULL_PROMPT" | \
   "$AGENT_BIN" --dangerously-skip-permissions --model "$MODEL" -p - \
   2>&1 | tee "$LOG_FILE"

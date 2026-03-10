@@ -109,21 +109,17 @@ if [ -n "$WORK_DIR" ] && [ -d "$WORK_DIR/.git" ]; then
     git -C "$WORK_DIR" pull --rebase 2>/dev/null || true
 fi
 
-# Compute repo path relative to CSC_ROOT for the agent prompt
-if [ -n "$WORK_DIR" ]; then
-    AGENT_REPO_REL="${WORK_DIR#$CSC_ROOT/}"
-else
-    AGENT_REPO_REL="(no temp repo)"
-fi
+# Use absolute repo path — agent runs from /opt, both /opt/clones and /opt/csc are in workspace
+AGENT_REPO_ABS="${WORK_DIR:-(no temp repo)}"
 
 # Build prompt from template + orders.md, substituting known placeholders
 TEMPLATE_CONTENT=$(cat "$TEMPLATE")
 WORKORDER_CONTENT=$(cat "$WORKORDER_PATH")
 FULL_PROMPT=$(printf '%s\n\n%s' "$TEMPLATE_CONTENT" "$WORKORDER_CONTENT" \
-  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_REL|g")
+  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_ABS|g")
 
-echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: $CSC_ROOT, repo: $AGENT_REPO_REL)"
-cd "$CSC_ROOT"
+echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: /opt, repo: $WORK_DIR)"
+cd /opt
 echo "$FULL_PROMPT" | \
   gemini -y -m "$MODEL" -p " " \
   2>&1 | tee "$LOG_FILE"

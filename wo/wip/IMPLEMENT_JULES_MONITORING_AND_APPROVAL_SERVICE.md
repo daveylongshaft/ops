@@ -633,3 +633,11 @@ Invalid API key · Fix external API key
 Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
 
 INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+START
+exploring codebase structure
+creating csc_service/infra/jules_monitor.py
+wiring jules_monitor into main.py
+updating csc-service.json with jules config
+creating tests/test_jules_monitor.py
+all files created and wired
+COMPLETE
