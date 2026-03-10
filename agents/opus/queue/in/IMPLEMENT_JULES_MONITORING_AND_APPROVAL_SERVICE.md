@@ -577,3 +577,17 @@ The assistant is in a cognitive loop. It has attempted several distinct, logical
 Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
 
 INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+
+
+--- Agent Log ---
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model opus -p -
+Invalid API key · Fix external API key
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/opus_1773110037.log
+
+
+--- Verify/Complete or Finish ---
+Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
