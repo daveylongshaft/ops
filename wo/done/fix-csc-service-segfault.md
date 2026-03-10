@@ -52,3 +52,5 @@ START
 AGENT_PID: 76756
 Research: Investigating signal handling and segfault on Windows
 COMPLETE
+2026-03-09 | fix-csc-service-segfault.md | Windows-only MSYS2 segfault. Not reproducible on Linux. Skipped.
+COMPLETE
