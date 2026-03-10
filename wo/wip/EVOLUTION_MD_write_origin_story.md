@@ -83,3 +83,6 @@ Then commit the ops submodule:
 cd /opt/csc/ops && git add -A && git commit -m "docs: archive platform 11-12 WOs, EVOLUTION.md complete"
 cd /opt/csc && git add ops && git commit -m "ops: update submodule after EVOLUTION.md"
 ```
+START
+reading research brief
+reading AUTONOMOUS_SYSTEM_ROADMAP.md

@@ -1,0 +1,11 @@
+Done. Here's what was done:
+
+**Finding**: Both `agent_service.py` and `workorders_service.py` already existed at `/opt/csc/irc/packages/csc-service/csc_service/shared/services/` and were functional. The only actual bug was a stale import reference in `workorders_service.py:457`.
+
+**Fix**: Changed `csc_shared.services.agent_service` → `csc_service.shared.services.agent_service` in the `assign()` method's fallback queue-worker path.
+
+**Tests written** (not run):
+- `/opt/csc/irc/tests/test_agent_service.py` — covers `list`, `select`, `status`, `stop`, `kill`, `tail`, `assign`, `_parse_front_matter`
+- `/opt/csc/irc/tests/test_workorders_service.py` — covers `status`, `list`, `read`, `add`, `move`, `edit`, `append`, `archive`, `assign`, `_sanitize_filename`, `urgency`
+
+**Verified**: `agent status`, `agent list`, `agent select sonnet`, `wo status`, `wo list ready` all work correctly.

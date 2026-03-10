@@ -16,3 +16,8 @@ research brief written to docs/EVOLUTION_RESEARCH_BRIEF.md
 writing opus workorder for EVOLUTION.md
 opus WO written to ops/wo/ready/EVOLUTION_MD_write_origin_story.md
 assigning to opus via agent command
+WO queued to opus agent queue - waiting for queue-worker to pick up
+archiving platform_11 and platform_12 WOs now
+platform_11 and 12 archived
+logging instruction to instruction_history.log
+committing ops submodule changes
