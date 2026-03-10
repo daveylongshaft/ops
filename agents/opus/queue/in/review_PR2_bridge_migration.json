@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-10T23:05:59Z",
-    "agent_name": "gemini-2.5-pro",
-    "workorder_name": "claude-evolution-story.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/claude-evolution-story.md",
+    "timestamp": "2026-03-10T23:38:32Z",
+    "agent_name": "opus",
+    "workorder_name": "review_PR2_bridge_migration.md",
+    "original_prompt_path": "/opt/csc/ops/wo/ready/review_PR2_bridge_migration.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
