@@ -2,7 +2,7 @@
 #
 # run_agent.sh - Gemini agent startup script for Unix-like systems
 # For: gemini, gemini-2.5-flash, gemini-3-flash, gemini-3-pro, etc.
-# Uses: gemini-cli -y -m <model> -p " " < stdin
+# Uses: gemini -y -m <model> -p " " < stdin
 #
 
 set -e
@@ -102,10 +102,10 @@ else
 fi
 
 # Invoke Gemini CLI from work directory
-echo "Invoking: gemini-cli -y -m $MODEL -p \" \""
+echo "Invoking: gemini -y -m $MODEL -p \" \""
 cd "$WORK_DIR"
 echo "$FULL_PROMPT" | \
-  gemini-cli -y -m "$MODEL" -p " " \
+  gemini -y -m "$MODEL" -p " " \
   2>&1 | tee "$LOG_FILE"
 
 echo ""
