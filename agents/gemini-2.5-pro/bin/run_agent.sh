@@ -100,24 +100,29 @@ else
 fi
 LOG_FILE="$LOGS_DIR/${AGENT_NAME}_$(date +%s).log"
 
-# Build prompt from template + orders.md content
-TEMPLATE_CONTENT=$(cat "$TEMPLATE")
-WORKORDER_CONTENT=$(cat "$WORKORDER_PATH")
-FULL_PROMPT="$TEMPLATE_CONTENT
-
-$WORKORDER_CONTENT"
-
 # The temp repo (provided by queue_worker) is where code changes happen.
 # Gemini runs from CSC_ROOT so its workspace covers both the temp repo
 # (at tmp/<agent>/<wo>/repo/ relative to CSC_ROOT) and the live WO file
-# (at ops/wo/wip/<wo>.md). Both are accessible to the sandbox.
+# (at ops/wo/wip/<wo>.md). Both are accessible without leaving the sandbox.
 WORK_DIR="${CSC_AGENT_REPO:-}"
 if [ -n "$WORK_DIR" ] && [ -d "$WORK_DIR/.git" ]; then
-    # Pull any remote updates into the already-cloned temp repo
     git -C "$WORK_DIR" pull --rebase 2>/dev/null || true
 fi
 
-echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: $CSC_ROOT, repo: $WORK_DIR)"
+# Compute repo path relative to CSC_ROOT for the agent prompt
+if [ -n "$WORK_DIR" ]; then
+    AGENT_REPO_REL="${WORK_DIR#$CSC_ROOT/}"
+else
+    AGENT_REPO_REL="(no temp repo)"
+fi
+
+# Build prompt from template + orders.md, substituting known placeholders
+TEMPLATE_CONTENT=$(cat "$TEMPLATE")
+WORKORDER_CONTENT=$(cat "$WORKORDER_PATH")
+FULL_PROMPT=$(printf '%s\n\n%s' "$TEMPLATE_CONTENT" "$WORKORDER_CONTENT" \
+  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_REL|g")
+
+echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: $CSC_ROOT, repo: $AGENT_REPO_REL)"
 cd "$CSC_ROOT"
 echo "$FULL_PROMPT" | \
   gemini -y -m "$MODEL" -p " " \
