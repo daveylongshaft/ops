@@ -11,7 +11,19 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_ROOT="$(dirname "$SCRIPT_DIR")"
 AGENT_NAME="$(basename "$AGENT_ROOT")"
-CSC_ROOT="$(cd "$AGENT_ROOT/../.." && pwd)"
+
+# Resolve CSC_ROOT: prefer env var (set by queue_worker), else walk up to find csc-service.json
+if [ -n "$CSC_ROOT" ] && [ -f "$CSC_ROOT/csc-service.json" ]; then
+  : # Use env var
+else
+  CSC_ROOT="$AGENT_ROOT"
+  for i in 1 2 3 4 5 6 7 8; do
+    CSC_ROOT="$(dirname "$CSC_ROOT")"
+    if [ -f "$CSC_ROOT/csc-service.json" ]; then
+      break
+    fi
+  done
+fi
 
 # Clear Claude Code nesting detection so agents can spawn
 unset CLAUDECODE
@@ -61,42 +73,52 @@ else
   exit 1
 fi
 
-# Find template
+# Find template (agent-specific first, then ops/agents/templates/)
 TEMPLATE="$AGENT_ROOT/orders.md-template"
 if [ ! -f "$TEMPLATE" ]; then
-  TEMPLATE="$CSC_ROOT/agents/templates/default.md"
+  TEMPLATE="$CSC_ROOT/ops/agents/templates/orders.md-template"
 fi
-
 if [ ! -f "$TEMPLATE" ]; then
   echo "ERROR: No template found"
   exit 1
 fi
 
-# Create logs directory
-LOGS_DIR="$CSC_ROOT/logs"
-mkdir -p "$LOGS_DIR"
+# Create logs directory (in ops/logs/ if available)
+if [ -d "$CSC_ROOT/ops/logs" ] || mkdir -p "$CSC_ROOT/ops/logs" 2>/dev/null; then
+  LOGS_DIR="$CSC_ROOT/ops/logs"
+else
+  LOGS_DIR="$CSC_ROOT/logs"
+  mkdir -p "$LOGS_DIR"
+fi
 LOG_FILE="$LOGS_DIR/${AGENT_NAME}_$(date +%s).log"
 
-# Build prompt
+# Compute temp repo relative path for template substitution
+WORK_DIR="${CSC_AGENT_REPO:-}"
+if [ -n "$WORK_DIR" ]; then
+  AGENT_REPO_REL="${WORK_DIR#$CSC_ROOT/}"
+else
+  AGENT_REPO_REL="(no temp repo)"
+fi
+
+# Build prompt with placeholder substitution
 TEMPLATE_CONTENT=$(cat "$TEMPLATE")
 WORKORDER_CONTENT=$(cat "$WORKORDER_PATH")
-FULL_PROMPT="$TEMPLATE_CONTENT
-
-$WORKORDER_CONTENT"
+FULL_PROMPT=$(printf '%s\n\n%s' "$TEMPLATE_CONTENT" "$WORKORDER_CONTENT" \
+  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_REL|g")
 
 # Find Claude binary
 AGENT_BIN=$(command -v claude 2>/dev/null || echo "")
 if [ -z "$AGENT_BIN" ]; then
-  AGENT_BIN=$(find /usr/local/bin /usr/bin /opt/bin ~/.local/bin -name claude 2>/dev/null | head -1)
+  AGENT_BIN=$(find ~/.local/bin /usr/local/bin /usr/bin /opt/bin -name claude 2>/dev/null | head -1)
 fi
-
 if [ -z "$AGENT_BIN" ]; then
   echo "ERROR: claude binary not found"
   exit 1
 fi
 
-# Invoke Claude
-echo "Invoking: $AGENT_BIN --dangerously-skip-permissions --model $MODEL -p -"
+# Run from CSC_ROOT so both the temp repo and WO are in workspace
+echo "Invoking: $AGENT_BIN --dangerously-skip-permissions --model $MODEL -p - (cwd: $CSC_ROOT, repo: $AGENT_REPO_REL)"
+cd "$CSC_ROOT"
 echo "$FULL_PROMPT" | \
   "$AGENT_BIN" --dangerously-skip-permissions --model "$MODEL" -p - \
   2>&1 | tee "$LOG_FILE"
