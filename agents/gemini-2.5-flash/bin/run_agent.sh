@@ -7,6 +7,12 @@
 
 set -e
 
+# Ensure nvm-managed node/gemini binary takes precedence over system installs
+NVM_BIN="$(ls -d "$HOME"/.nvm/versions/node/*/bin 2>/dev/null | sort -V | tail -1)"
+if [ -n "$NVM_BIN" ]; then
+  export PATH="$NVM_BIN:$PATH"
+fi
+
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_ROOT="$(dirname "$SCRIPT_DIR")"
@@ -101,9 +107,28 @@ FULL_PROMPT="$TEMPLATE_CONTENT
 
 $WORKORDER_CONTENT"
 
-# Agents run directly in CSC_ROOT (no temp clone) to access all submodule content
-echo "Invoking: gemini -y -m $MODEL -p \" \""
-cd "$CSC_ROOT"
+# Use temp repo provided by queue_worker (unique per WO), or fall back to a new one
+WORK_DIR="${CSC_AGENT_REPO:-}"
+if [ -n "$WORK_DIR" ]; then
+    if [ -d "$WORK_DIR/.git" ]; then
+        cd "$WORK_DIR" && git pull --rebase 2>/dev/null || true
+        cd "$CSC_ROOT"
+    else
+        mkdir -p "$WORK_DIR"
+        # Clone irc.git (derive remote from CSC_ROOT's origin)
+        IRC_REMOTE=$(git -C "$CSC_ROOT" remote get-url origin 2>/dev/null | sed 's|/csc\.git|/irc.git|' || echo "")
+        if [ -n "$IRC_REMOTE" ]; then
+            git clone --depth=1 "$IRC_REMOTE" "$WORK_DIR" 2>/dev/null || true
+        fi
+    fi
+else
+    # Fallback: create a unique dir per invocation
+    WORK_DIR="${TMPDIR:-/tmp}/csc-agent-$AGENT_NAME-$$"
+    mkdir -p "$WORK_DIR"
+fi
+
+echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: $WORK_DIR)"
+cd "$WORK_DIR"
 echo "$FULL_PROMPT" | \
   gemini -y -m "$MODEL" -p " " \
   2>&1 | tee "$LOG_FILE"

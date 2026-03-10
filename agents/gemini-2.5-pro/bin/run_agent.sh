@@ -7,6 +7,12 @@
 
 set -e
 
+# Ensure nvm-managed node/gemini binary takes precedence over system installs
+NVM_BIN="$(ls -d "$HOME"/.nvm/versions/node/*/bin 2>/dev/null | sort -V | tail -1)"
+if [ -n "$NVM_BIN" ]; then
+  export PATH="$NVM_BIN:$PATH"
+fi
+
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_ROOT="$(dirname "$SCRIPT_DIR")"
