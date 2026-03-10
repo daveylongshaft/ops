@@ -4,14 +4,12 @@
 # Takes AGENT_DIR and WO_FILENAME (must be in workorders/wip/) as arguments.
 
 AGENT_DIR="$1"
-# Optional 3rd arg: WIP dir prefix (default: workorders/wip)
-# Pass ops/wo/wip for the submodule layout
-WIP_DIR_PREFIX="${3:-workorders/wip}"
-WIP_RELATIVE_PATH="$WIP_DIR_PREFIX/$2"
+# 3rd arg: absolute WIP file path (e.g. /opt/csc/ops/wo/wip/PROMPT_foo.md)
+ABS_WIP_PATH="$3"
 TEMPLATE_PATH="$AGENT_DIR/orders.md-template"
 
-echo "usage: generate_orders_md.sh <agent_dir> <wo_filename> (must be in workorders/wip/)"
-echo "generating \"$AGENT_DIR/queue/in/orders.md\" for $WIP_RELATIVE_PATH"
+echo "usage: generate_orders_md.sh <agent_dir> <wo_filename> <abs_wip_path>"
+echo "generating \"$AGENT_DIR/queue/in/orders.md\" for $ABS_WIP_PATH"
 
 # Ensure output directory exists
 mkdir -p "$AGENT_DIR/queue/in"
@@ -33,7 +31,7 @@ fi
 
 # Generate content by replacing the tag using sed
 OUTPUT_FILE="$AGENT_DIR/queue/in/orders.md"
-sed "s|<wip_file_relative_pathspec>|$WIP_RELATIVE_PATH|g" "$FINAL_TEMPLATE" > "$OUTPUT_FILE"
+sed "s|<wip_file_abs_path>|$ABS_WIP_PATH|g" "$FINAL_TEMPLATE" > "$OUTPUT_FILE"
 
 if [ $? -eq 0 ]; then
     echo "Successfully generated $OUTPUT_FILE"

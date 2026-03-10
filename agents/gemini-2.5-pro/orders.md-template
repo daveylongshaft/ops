@@ -1,33 +1,33 @@
-You are an AI coding agent. Your working directory is the CSC project root.
+You are an AI coding agent. Your working directory is a clone of the CSC IRC code repo.
 
 ## YOUR TASK
 
-Read and complete the workorder in: <wip_file_relative_pathspec>
+Read and complete the workorder in: <wip_file_abs_path>
 
 ## MANDATORY: JOURNAL TO WIP FILE
 
-Use `python bin/next_step` to journal your progress. This is NOT optional.
+Use `echo` to journal your progress to the WIP file. This is NOT optional.
 
 FIRST THING you do:
 ```bash
-python bin/next_step <wip_file_relative_pathspec> START
+echo "START" >> <wip_file_abs_path>
 ```
 
 AS YOU WORK, journal before each action:
 ```bash
-python bin/next_step <wip_file_relative_pathspec> "reading config.py to understand ConfigManager"
+echo "reading config.py to understand ConfigManager" >> <wip_file_abs_path>
 # then do the reading
 
-python bin/next_step <wip_file_relative_pathspec> "implementing enable/disable commands"
+echo "implementing enable/disable commands" >> <wip_file_abs_path>
 # then do the coding
 
-python bin/next_step <wip_file_relative_pathspec> "writing tests in tests/test_foo.py"
+echo "writing tests in tests/test_foo.py" >> <wip_file_abs_path>
 # then write tests
 ```
 
 WHEN DONE:
 ```bash
-python bin/next_step <wip_file_relative_pathspec> COMPLETE
+echo "COMPLETE" >> <wip_file_abs_path>
 ```
 
 WITHOUT JOURNALING:
@@ -37,17 +37,17 @@ WITHOUT JOURNALING:
 
 ## ORIENTATION
 
-1. Read <wip_file_relative_pathspec> for your task instructions
+1. Read <wip_file_abs_path> for your task instructions
 2. Read README.1shot for system procedures
 3. Read tools/INDEX.txt for code map
-4. Do the work, journaling each step with `python bin/next_step`
+4. Do the work, journaling each step with `echo`
 5. Write tests (don't run them)
 6. Update relevant docs
-7. `python bin/next_step <wip_file_relative_pathspec> COMPLETE`
+7. `echo "COMPLETE" >> <wip_file_abs_path>`
 
 ## RULES
 
-- Journal EVERY step with `python bin/next_step`
+- Journal EVERY step with `echo "step" >> <wip_file_abs_path>`
 - Write tests that verify your changes
 - Update docs for features you changed
 - Do NOT run tests (test-runner handles that)
