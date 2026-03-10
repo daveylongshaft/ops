@@ -107,28 +107,18 @@ FULL_PROMPT="$TEMPLATE_CONTENT
 
 $WORKORDER_CONTENT"
 
-# Use temp repo provided by queue_worker (unique per WO), or fall back to a new one
+# The temp repo (provided by queue_worker) is where code changes happen.
+# Gemini runs from CSC_ROOT so its workspace covers both the temp repo
+# (at tmp/<agent>/<wo>/repo/ relative to CSC_ROOT) and the live WO file
+# (at ops/wo/wip/<wo>.md). Both are accessible to the sandbox.
 WORK_DIR="${CSC_AGENT_REPO:-}"
-if [ -n "$WORK_DIR" ]; then
-    if [ -d "$WORK_DIR/.git" ]; then
-        cd "$WORK_DIR" && git pull --rebase 2>/dev/null || true
-        cd "$CSC_ROOT"
-    else
-        mkdir -p "$WORK_DIR"
-        # Clone irc.git (derive remote from CSC_ROOT's origin)
-        IRC_REMOTE=$(git -C "$CSC_ROOT" remote get-url origin 2>/dev/null | sed 's|/csc\.git|/irc.git|' || echo "")
-        if [ -n "$IRC_REMOTE" ]; then
-            git clone --depth=1 "$IRC_REMOTE" "$WORK_DIR" 2>/dev/null || true
-        fi
-    fi
-else
-    # Fallback: create a unique dir per invocation
-    WORK_DIR="${TMPDIR:-/tmp}/csc-agent-$AGENT_NAME-$$"
-    mkdir -p "$WORK_DIR"
+if [ -n "$WORK_DIR" ] && [ -d "$WORK_DIR/.git" ]; then
+    # Pull any remote updates into the already-cloned temp repo
+    git -C "$WORK_DIR" pull --rebase 2>/dev/null || true
 fi
 
-echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: $WORK_DIR)"
-cd "$WORK_DIR"
+echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: $CSC_ROOT, repo: $WORK_DIR)"
+cd "$CSC_ROOT"
 echo "$FULL_PROMPT" | \
   gemini -y -m "$MODEL" -p " " \
   2>&1 | tee "$LOG_FILE"
