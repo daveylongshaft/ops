@@ -145,3 +145,27 @@ An unexpected critical error occurred:[object Object]
 Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
 
 INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+START
+reading README.1shot and INDEX.txt
+fixing csc_shared import in workorders_service.py
+writing tests for agent_service and workorders_service
+verifying no csc_shared references remain in services
+COMPLETE
+
+
+--- Agent Log ---
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model sonnet -p - (cwd: /opt, repo: /opt/csc/tmp/sonnet/REBUILD_AGENT_AND_WORKORDERS_SERVICES-1773112399/repo)
+Done. Here's what was done:
+
+**Finding**: Both `agent_service.py` and `workorders_service.py` already existed at `/opt/csc/irc/packages/csc-service/csc_service/shared/services/` and were functional. The only actual bug was a stale import reference in `workorders_service.py:457`.
+
+**Fix**: Changed `csc_shared.services.agent_service` → `csc_service.shared.services.agent_service` in the `assign()` method's fallback queue-worker path.
+
+**Tests written** (not run):
+- `/opt/csc/irc/tests/test_agent_service.py` — covers `list`, `select`, `status`, `stop`, `kill`, `tail`, `assign`, `_parse_front_matter`
+- `/opt/csc/irc/tests/test_workorders_service.py` — covers `status`, `list`, `read`, `add`, `move`, `edit`, `append`, `archive`, `assign`, `_sanitize_filename`, `urgency`
+
+**Verified**: `agent status`, `agent list`, `agent select sonnet`, `wo status`, `wo list ready` all work correctly.
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/sonnet_1773112400.log
