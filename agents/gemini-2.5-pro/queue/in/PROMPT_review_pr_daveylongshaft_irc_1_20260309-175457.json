@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-10T03:18:05Z",
+    "timestamp": "2026-03-10T03:38:00Z",
     "agent_name": "gemini-2.5-pro",
-    "workorder_name": "create_file_comparison_script.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/create_file_comparison_script.md",
+    "workorder_name": "PROMPT_review_pr_daveylongshaft_irc_1_20260309-175457.md",
+    "original_prompt_path": "/opt/csc/ops/wo/ready/PROMPT_review_pr_daveylongshaft_irc_1_20260309-175457.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
