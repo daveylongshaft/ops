@@ -4,7 +4,10 @@
 # Takes AGENT_DIR and WO_FILENAME (must be in workorders/wip/) as arguments.
 
 AGENT_DIR="$1"
-WIP_RELATIVE_PATH="workorders/wip/$2"
+# Optional 3rd arg: WIP dir prefix (default: workorders/wip)
+# Pass ops/wo/wip for the submodule layout
+WIP_DIR_PREFIX="${3:-workorders/wip}"
+WIP_RELATIVE_PATH="$WIP_DIR_PREFIX/$2"
 TEMPLATE_PATH="$AGENT_DIR/orders.md-template"
 
 echo "usage: generate_orders_md.sh <agent_dir> <wo_filename> (must be in workorders/wip/)"
