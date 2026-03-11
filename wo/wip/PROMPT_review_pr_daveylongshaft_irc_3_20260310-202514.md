@@ -71,12 +71,15 @@ Answer:
 6. Any import cascades break?
 7. Test coverage adequate?
 
-Post your decision:
+Post your decision using the GitHub App token so the review comes from the bot account, not the repo owner:
+
+  # Get App token first:
+  APP_TOKEN=$(python3 /opt/csc/bin/gh-app-token.py)
 
   # Approve:
-  gh pr review 3 --repo daveylongshaft/irc --approve --body "Your findings"
+  GH_TOKEN="$APP_TOKEN" gh pr review 3 --repo daveylongshaft/irc --approve --body "Your findings"
 
   # Request changes:
-  gh pr review 3 --repo daveylongshaft/irc --request-changes --body "Your specific findings"
+  GH_TOKEN="$APP_TOKEN" gh pr review 3 --repo daveylongshaft/irc --request-changes --body "Your specific findings"
 
 Then echo COMPLETE.
