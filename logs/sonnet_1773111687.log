@@ -1,0 +1,22 @@
+All work is complete. Here's a summary of what was built:
+
+**Agent directory structure** (`agents/plan-review/`):
+- `queue/in/`, `queue/work/`, `queue/out/` — plan pipeline directories
+- `context/system.md` — AI system prompt with APPROVE/DENY criteria and JSON output format
+- `context/guidelines.md` — CSC coding standards (one-class-per-file, Platform() paths, docstrings, type hints, etc.)
+- `state.json` — metrics tracking (total_reviewed, total_approved, total_denied, errors)
+
+**New service** (`csc_service/infra/plan_review.py`):
+- `PlanReviewer` class extending `Data`, with `run_cycle()` entry point
+- Polls `queue/in/*.json`, spawns AI subprocess, parses JSON decision, writes to `queue/out/`, removes input file
+- Tracks metrics in `state.json`
+
+**Julius client** (`csc_service/clients/julius/julius.py`):
+- `Julius` class with `submit_plan_for_review(session_id, content)` — writes plan to `queue/in/`
+- `check_plan_approval(session_id)` — reads decision from `queue/out/`, returns `None` if pending
+
+**PM integration** (`csc_service/infra/pm.py`):
+- Added `monitor_julius_plans()` — iterates `julius_sessions` state entries in `pending_approval` state, calls `check_plan_approval()`, calls `approve_plan_via_api()` on APPROVE or records denial reason on DENY
+
+**Tests** (`tests/test_plan_review.py`):
+- 20 test cases covering decision parsing, queue I/O, timeouts, bad input, run_cycle metrics, Julius submit/check, and module entry point

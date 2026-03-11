@@ -1,0 +1,13 @@
+Done. Here's what was delivered:
+
+**`docs/EVOLUTION.md`** — The system's origin story, written as a primary source document. It traces the full arc:
+
+- **Era 0 (Jun 2025):** syscmdr — the copy-paste origin, "gotta startsomewhere" x5, the command protocol DNA
+- **Era 1 (Sep 2025):** syscmdr-II — the heartbeat, the first autonomous timer, one day of development that changed the system's relationship with time
+- **Era 2 (Oct 2025 – Feb 2026):** client-server-commander — IRC as nervous system, 4,400 commits, six leaps of autonomy (queue worker, PM, auto-PR review, batch API, self-healing tests, federation design)
+- **Era 3 (Mar 2026):** Three-repo split — the system developing its own boundaries
+- **Invariants:** Command protocol, plugin architecture, urgency, Gemini as first peer
+- **Trajectory:** Federation → economic participation → self-sustaining
+- **Significance:** How autonomous systems actually emerge — not from research labs, but from friction elimination
+
+**`tests/test_evolution_md.py`** — 20 tests validating structure, required sections, key historical facts, tone (no corporate boilerplate), and narrative format.

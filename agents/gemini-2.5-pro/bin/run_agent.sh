@@ -2,16 +2,35 @@
 #
 # run_agent.sh - Gemini agent startup script for Unix-like systems
 # For: gemini, gemini-2.5-flash, gemini-3-flash, gemini-3-pro, etc.
-# Uses: gemini-cli -y -m <model> -p " " < stdin
+# Uses: gemini -y -m <model> -p " " < stdin
 #
 
 set -e
+
+# Ensure nvm-managed node/gemini binary takes precedence over system installs
+NVM_BIN="$(ls -d "$HOME"/.nvm/versions/node/*/bin 2>/dev/null | sort -V | tail -1)"
+if [ -n "$NVM_BIN" ]; then
+  export PATH="$NVM_BIN:$PATH"
+fi
 
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AGENT_ROOT="$(dirname "$SCRIPT_DIR")"
 AGENT_NAME="$(basename "$AGENT_ROOT")"
-CSC_ROOT="$(cd "$AGENT_ROOT/../.." && pwd)"
+
+# Resolve CSC_ROOT: prefer env var (set by queue_worker), else walk up to find csc-service.json
+if [ -n "$CSC_ROOT" ] && [ -f "$CSC_ROOT/csc-service.json" ]; then
+  : # Use env var
+else
+  # Walk up from AGENT_ROOT looking for csc-service.json
+  CSC_ROOT="$AGENT_ROOT"
+  for i in 1 2 3 4 5 6 7 8; do
+    CSC_ROOT="$(dirname "$CSC_ROOT")"
+    if [ -f "$CSC_ROOT/csc-service.json" ]; then
+      break
+    fi
+  done
+fi
 
 # Load API keys from .env
 if [ -f "$CSC_ROOT/.env" ]; then
@@ -50,7 +69,7 @@ elif [ -n "$WORKORDER_PATH" ]; then
   if [ -f "$CSC_ROOT/$WORKORDER_PATH" ]; then
     WORKORDER_PATH="$CSC_ROOT/$WORKORDER_PATH"
   else
-    echo "ERROR: Workorder not found: $WORKORDER_PATH"
+    echo "ERROR: Workorder not found: $WORKORDER_PATH (tried $CSC_ROOT/$WORKORDER_PATH)"
     exit 1
   fi
 else
@@ -58,54 +77,51 @@ else
   exit 1
 fi
 
-# Find template
+# Find template (agent-specific first, then ops/agents/templates)
 TEMPLATE="$AGENT_ROOT/orders.md-template"
 if [ ! -f "$TEMPLATE" ]; then
-  TEMPLATE="$CSC_ROOT/agents/templates/default.md"
+  TEMPLATE="$CSC_ROOT/ops/agents/templates/orders.md-template"
+fi
+if [ ! -f "$TEMPLATE" ]; then
+  TEMPLATE="$CSC_ROOT/agents/templates/orders.md-template"
 fi
 
 if [ ! -f "$TEMPLATE" ]; then
-  echo "ERROR: No template found"
+  echo "ERROR: No template found (checked $AGENT_ROOT/orders.md-template, ops/agents/templates/)"
   exit 1
 fi
 
-# Create logs directory
-LOGS_DIR="$CSC_ROOT/logs"
-mkdir -p "$LOGS_DIR"
+# Create logs directory (in ops/logs/ if available, else CSC_ROOT/logs/)
+if [ -d "$CSC_ROOT/ops/logs" ] || mkdir -p "$CSC_ROOT/ops/logs" 2>/dev/null; then
+  LOGS_DIR="$CSC_ROOT/ops/logs"
+else
+  LOGS_DIR="$CSC_ROOT/logs"
+  mkdir -p "$LOGS_DIR"
+fi
 LOG_FILE="$LOGS_DIR/${AGENT_NAME}_$(date +%s).log"
 
-# Build prompt
+# The temp repo (provided by queue_worker) is where code changes happen.
+# Gemini runs from CSC_ROOT so its workspace covers both the temp repo
+# (at tmp/<agent>/<wo>/repo/ relative to CSC_ROOT) and the live WO file
+# (at ops/wo/wip/<wo>.md). Both are accessible without leaving the sandbox.
+WORK_DIR="${CSC_AGENT_REPO:-}"
+if [ -n "$WORK_DIR" ] && [ -d "$WORK_DIR/.git" ]; then
+    git -C "$WORK_DIR" pull --rebase 2>/dev/null || true
+fi
+
+# Use absolute repo path — agent runs from /opt, both /opt/clones and /opt/csc are in workspace
+AGENT_REPO_ABS="${WORK_DIR:-(no temp repo)}"
+
+# Build prompt from template + orders.md, substituting known placeholders
 TEMPLATE_CONTENT=$(cat "$TEMPLATE")
 WORKORDER_CONTENT=$(cat "$WORKORDER_PATH")
-FULL_PROMPT="$TEMPLATE_CONTENT
+FULL_PROMPT=$(printf '%s\n\n%s' "$TEMPLATE_CONTENT" "$WORKORDER_CONTENT" \
+  | sed "s|<agent_repo_rel_path>|$AGENT_REPO_ABS|g")
 
-$WORKORDER_CONTENT"
-
-# Check npx availability
-if ! command -v npx &>/dev/null; then
-  echo "ERROR: npx not found (required for Gemini CLI)"
-  exit 1
-fi
-
-# Create agent working directory under temp (NOT in agents dir)
-WORK_DIR="${TMPDIR:-/tmp}/csc-agent-$AGENT_NAME"
-if [ ! -d "$WORK_DIR" ]; then
-  echo "Creating agent work directory: $WORK_DIR"
-  git clone "$CSC_ROOT" "$WORK_DIR" 2>/dev/null || {
-    mkdir -p "$WORK_DIR"
-    cp -r "$CSC_ROOT"/{packages,tools,workorders,agents,tests,bin,.env,README.md,CLAUDE.md,csc-service.json} "$WORK_DIR/" 2>/dev/null || true
-  }
-else
-  # Pull latest changes
-  cd "$WORK_DIR" && git pull --rebase 2>/dev/null || true
-  cd "$CSC_ROOT"
-fi
-
-# Invoke Gemini CLI from work directory
-echo "Invoking: gemini-cli -y -m $MODEL -p \" \""
-cd "$WORK_DIR"
+echo "Invoking: gemini -y -m $MODEL -p \" \" (cwd: /opt, repo: $WORK_DIR)"
+cd /opt
 echo "$FULL_PROMPT" | \
-  gemini-cli -y -m "$MODEL" -p " " \
+  gemini -y -m "$MODEL" -p " " \
   2>&1 | tee "$LOG_FILE"
 
 echo ""

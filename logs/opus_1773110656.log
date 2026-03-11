@@ -1,0 +1,20 @@
+Done. Here's what was implemented:
+
+**Created:**
+- `irc/packages/csc-service/csc_service/infra/jules_monitor.py` — `JulesMonitor` class extending `Data`, with:
+  - API polling (`_list_sessions`, `_get_session`)
+  - Plan validation against CSC standards (one-class-per-file, Platform() paths, docstrings, type hints, self.log() usage, breaking changes)
+  - State handlers for AWAITING_USER_FEEDBACK, IN_PROGRESS, COMPLETED, FAILED
+  - Feedback sending via Jules REST API
+  - Session tracking via Data persistence (`jules_monitor_data.json`)
+  - Module-level `run_cycle()` entry point matching pr_review.py pattern
+
+- `irc/tests/test_jules_monitor.py` — 22 tests covering:
+  - Plan validation (12 tests for each CSC standard check)
+  - Session state handlers (7 tests including idempotency)
+  - API interaction (4 mock tests for list/send)
+  - Run cycle integration (2 tests)
+
+**Modified:**
+- `irc/packages/csc-service/csc_service/main.py` — Added `enable_jules` config read + `jules_monitor.run_cycle()` in daemon loop
+- `csc-service.json` — Added `jules` config section (enabled, API key env, poll interval, auto-approve)

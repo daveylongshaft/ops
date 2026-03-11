@@ -1,0 +1,126 @@
+{
+  "job_name": "fix-test-and-docs-batch",
+  "model": "gemini-2.5-flash",
+  "entries": [
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_agent.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_backup.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_builtin.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_cryptserv.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_curl.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_help.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_module_manager.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_nickserv.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_ntfy.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_patch.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_docs_svc_version.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_0000_verify_client_bridge_localserver_service_commands.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_agent_separate_repo.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_agent_service.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_botserv_logread.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_botserv_logs.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_builtin_service.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_claude_irc.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_client_readline.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_coding_agent.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_cryptserv_service.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_csc_ctl.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_integration.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_nickserv.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_persistence.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_queue_worker_temp_repo.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_remote_execution.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_server_irc.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_storage_manager.md"
+    },
+    {
+      "provider": "gemini",
+      "prompt_file": "/opt/csc/ops/wo/run_next/PROMPT_fix_test_topic_command.md"
+    }
+  ]
+}

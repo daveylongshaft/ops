@@ -1,0 +1,5 @@
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model claude-sonnet-4-5-20250929 -p -
+Invalid API key · Fix external API key
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/sonnet_1773106194.log

@@ -1,58 +1,43 @@
-You are an AI coding agent. Your working directory is the CSC project root.
+You are an AI coding agent running from /opt/.
 
-## YOUR TASK
+## YOUR ENVIRONMENT
 
-Read and complete the workorder in: <wip_file_relative_pathspec>
+- **Code repo**: `<agent_repo_rel_path>/` — your isolated clone of irc.git. Do all code edits here.
+- **Task file**: `<wip_file_abs_path>` — read this for your task. Write journal + COMPLETE here.
+
+## ORIENTATION
+
+1. Read your task: `<wip_file_abs_path>`
+2. Read `<agent_repo_rel_path>/README.1shot` for system procedures
+3. Read `<agent_repo_rel_path>/tools/INDEX.txt` for code map
+4. Do the work inside `<agent_repo_rel_path>/`, journaling each step
+5. Write tests (don't run them)
+6. `echo "COMPLETE" >> <wip_file_abs_path>`
 
 ## MANDATORY: JOURNAL TO WIP FILE
 
-Use `python bin/next_step` to journal your progress. This is NOT optional.
-
 FIRST THING you do:
 ```bash
-python bin/next_step <wip_file_relative_pathspec> START
+echo "START" >> <wip_file_abs_path>
 ```
 
-AS YOU WORK, journal before each action:
+AS YOU WORK, before each action:
 ```bash
-python bin/next_step <wip_file_relative_pathspec> "reading config.py to understand ConfigManager"
-# then do the reading
-
-python bin/next_step <wip_file_relative_pathspec> "implementing enable/disable commands"
-# then do the coding
-
-python bin/next_step <wip_file_relative_pathspec> "writing tests in tests/test_foo.py"
-# then write tests
+echo "reading config.py" >> <wip_file_abs_path>
+echo "implementing X" >> <wip_file_abs_path>
 ```
 
 WHEN DONE:
 ```bash
-python bin/next_step <wip_file_relative_pathspec> COMPLETE
+echo "COMPLETE" >> <wip_file_abs_path>
 ```
 
-WITHOUT JOURNALING:
-- Queue-worker cannot detect completion
-- Work is marked INCOMPLETE and retried
-- You get no credit
-
-## ORIENTATION
-
-1. Read <wip_file_relative_pathspec> for your task instructions
-2. Read README.1shot for system procedures
-3. Read tools/INDEX.txt for code map
-4. Do the work, journaling each step with `python bin/next_step`
-5. Write tests (don't run them)
-6. Update relevant docs
-7. `python bin/next_step <wip_file_relative_pathspec> COMPLETE`
+WITHOUT `COMPLETE` the queue-worker marks work INCOMPLETE and retries.
 
 ## RULES
 
-- Journal EVERY step with `python bin/next_step`
-- Write tests that verify your changes
-- Update docs for features you changed
-- Do NOT run tests (test-runner handles that)
+- All code edits go in `<agent_repo_rel_path>/`
+- Journal EVERY step with `echo "step" >> <wip_file_abs_path>`
+- Write tests; do NOT run them (test-runner handles that)
 - Do NOT touch git (queue-worker handles that)
-- Do NOT move files between workorders directories
-
----
-
+- Do NOT move files between workorder directories

@@ -1,0 +1,7 @@
+{
+    "current_pid": 3015929,
+    "current_prompt": "haiku-fix_agent_tail_segfault.md",
+    "current_log": "/opt/csc/ops/logs/agent_1773106565_haiku-fix_agent_tail_segfault.log",
+    "started_at": 1773106568,
+    "selected_agent": "gemini-2.5-pro"
+}
