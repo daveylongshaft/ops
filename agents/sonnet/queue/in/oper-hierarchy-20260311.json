@@ -1,6 +1,6 @@
 {
-    "timestamp": "2026-03-11T05:21:54Z",
-    "agent_name": "gemini-2.5-pro",
+    "timestamp": "2026-03-11T05:24:41Z",
+    "agent_name": "sonnet",
     "workorder_name": "oper-hierarchy-20260311.md",
     "original_prompt_path": "/opt/csc/ops/wo/ready/oper-hierarchy-20260311.md",
     "platform_paths": {
