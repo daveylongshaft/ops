@@ -90,3 +90,16 @@ git push
 - If csc-ctl is not on PATH, run: `python -m csc_service.cli.main <command>`
 - If NSSM is needed for service install, it is at: `%CSC_ROOT%\bin\nssm.exe`
 - On failure at any step: stop, document the error at the bottom of this file, move to done/ anyway, and push so the failure is visible
+
+## Log of Efforts - 2026-03-11
+
+- **Initial Status**: csc-ctl on Windows was unable to start services because it lacked a native Windows provider.
+- **NSSM Support**: Created irc/packages/csc-service/csc_service/shared/platform_service_windows.py with WindowsServiceProvider and WindowsServiceDetector to manage services as native Windows background tasks.
+- **csc-ctl Enhancement**: Modified service_cmd.py to use WindowsServiceProvider for install/start/stop. This enables automated service registration.
+- **Unified Launcher**: Built in/csc-service to provide a single entry point for the daemon, solving ModuleNotFoundError by managing sys.path.
+- **Import Migration**:
+    - Fixed csc_server import path in main.py.
+    - Added enable_bridge support to the daemon loop.
+    - Converted absolute imports to relative in server.py.
+- **Environment**: Regenerated platform.json to fix path mismatch (Linux defaults on Windows host).
+- **Current Blocker**: Service installation requires Administrator privileges, which cannot be obtained from the current non-elevated shell.
