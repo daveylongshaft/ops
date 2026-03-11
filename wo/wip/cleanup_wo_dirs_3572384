@@ -1,0 +1,4 @@
+PID: 3572384 starting at Wed 11 Mar 2026 04:19:36 AM CDT
+consolidating all WO dirs into ops/wo
+moving irc/workorders/recurring template
+moving nope/done WOs to ops/wo/done

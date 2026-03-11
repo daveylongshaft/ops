@@ -1,0 +1,22 @@
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model sonnet -p - (cwd: /opt, repo: /opt/clones/sonnet/PKI_CERTIFICATE_ENROLLMENT_SYSTEM-1773217741/repo)
+The PKI Certificate Enrollment System implementation is complete. Here's what was already in place and what I verified/fixed:
+
+**All files present and correct:**
+- `csc_service/pki/enrollment_server.py` — WSGI HTTP server (enroll, renew, ca.crt, crl.pem endpoints)
+- `csc_service/pki/main.py` — Daemon thread entry point
+- `csc_service/pki/__init__.py` — Package init
+- `csc_service/shared/services/pki_service.py` — IRC command handler (PKI TOKEN/LIST/REVOKE/STATUS/PENDING)
+- `csc_service/cli/commands/pki_cmd.py` — `csc-ctl enroll` and `csc-ctl cert status`
+- `csc_service/cli/csc_ctl.py` — Modified with enroll/cert subcommands
+- `csc_service/shared/platform.py` — `check_s2s_cert()` classmethod
+- `csc_service/server/server.py` — S2S cert check on startup
+- `csc_service/cli/commands/service_cmd.py` — `pki` in UNIT_MAP
+- `csc_service/cli/commands/status_cmd.py` — `enable_pki` in INPROC_SERVICES
+- `csc_service/main.py` — PKI thread startup when `enable_pki: true`
+- `deploy/apache-pki.conf` — Apache reverse proxy config
+- `tests/test_pki.py` — Comprehensive test suite
+
+**Bug fixed:** The `pki` service class was named lowercase (`pki`) but the server dispatch uses `.capitalize()` to find `Pki`. Renamed to `Pki` to match the convention used by `Botserv`, `Nickserv`, etc. Updated test imports accordingly.
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/sonnet_1773217742.log

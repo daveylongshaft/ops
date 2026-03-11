@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-11T08:28:54Z",
-    "agent_name": "sonnet",
-    "workorder_name": "PKI_CERTIFICATE_ENROLLMENT_SYSTEM.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/PKI_CERTIFICATE_ENROLLMENT_SYSTEM.md",
+    "timestamp": "2026-03-11T10:00:16Z",
+    "agent_name": "gemini-2.5-pro",
+    "workorder_name": "csc-ftpd-wo-watcher.md",
+    "original_prompt_path": "/opt/csc/ops/wo/ready/csc-ftpd-wo-watcher.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
