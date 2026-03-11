@@ -90,3 +90,43 @@ git push
 - If csc-ctl is not on PATH, run: `python -m csc_service.cli.main <command>`
 - If NSSM is needed for service install, it is at: `%CSC_ROOT%\bin\nssm.exe`
 - On failure at any step: stop, document the error at the bottom of this file, move to done/ anyway, and push so the failure is visible
+
+
+--- Agent Log ---
+Already up to date.
+Current branch main is up to date.
+Invoking: gemini -y -m gemini-2.5-pro -p " " (cwd: /opt, repo: /opt/clones/gemini-2.5-pro/windows-service-update-1773229108/repo)
+[WARN] Skipping unreadable directory: /opt/csc/.config/configstore (EACCES: permission denied, scandir '/opt/csc/.config/configstore')
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+[WARN] Skipping unreadable directory: /opt/csc/.config/configstore (EACCES: permission denied, scandir '/opt/csc/.config/configstore')
+YOLO mode is enabled. All tool calls will be automatically approved.
+Hook registry initialized with 0 hook entries
+Error when talking to Gemini API Full report available at: /tmp/gemini-client-error-Turn.run-sendMessageStream-2026-03-11T11-38-51-210Z.json TerminalQuotaError: You have exhausted your capacity on this model. Your quota will reset after 11h27m50s.
+    at classifyGoogleError (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/googleQuotaErrors.js:214:28)
+    at retryWithBackoff (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/retry.js:131:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:431:32)
+    at async GeminiChat.streamWithRetries (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:263:40)
+    at async Turn.run (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/turn.js:66:30)
+    at async GeminiClient.processTurn (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:459:26)
+    at async GeminiClient.sendMessageStream (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:559:20)
+    at async file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/dist/src/nonInteractiveCli.js:193:34
+    at async main (file:///home/davey/.nvm/versions/node/v22.20.0/lib/node_modules/@google/gemini-cli/dist/src/gemini.js:492:9) {
+  cause: {
+    code: 429,
+    message: 'You have exhausted your capacity on this model. Your quota will reset after 11h27m50s.',
+    details: [ [Object], [Object] ]
+  },
+  retryDelayMs: 41270846.662087
+}
+An unexpected critical error occurred:[object Object]
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/gemini-2.5-pro_1773229109.log
+
+
+--- Verify/Complete or Finish ---
+Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
