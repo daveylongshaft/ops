@@ -127,3 +127,53 @@ An unexpected critical error occurred:[object Object]
 Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
 
 INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+START
+verified: this machine IS the webhook host (107.173.223.138 = facingaddictionwithhope.com)
+reading existing package structure
+reading existing .env and config structure
+checking available Python packages
+implementing webhook_listener.py
+creating Apache reverse proxy config
+creating systemd service template for webhook listener
+adding csc-webhook entry point to pyproject.toml
+writing tests
+creating GitHub App update instructions doc
+verifying all created files exist
+COMPLETE
+
+
+--- Agent Log ---
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model sonnet -p - (cwd: /opt, repo: /opt/clones/sonnet/PROMPT_setup_github_webhook-1773228753/repo)
+Done. Here's a summary of what was implemented:
+
+## Deliverables
+
+### 1. `packages/csc-service/csc_service/infra/webhook_listener.py`
+- Pure stdlib HTTP server (no Flask/FastAPI dependency) listening on `127.0.0.1:5000`
+- HMAC-SHA256 signature verification using `GITHUB_WEBHOOK_SECRET` from `.env`
+- Handles `pull_request` events with `opened`/`synchronize` actions only
+- Extracts repo, PR number, branch, URL and spawns `bin/pr-review-agent.sh` in a daemon thread with those as env vars
+- `/health` GET endpoint for monitoring
+- `csc-webhook` entry point added to `pyproject.toml`
+
+### 2. `deploy/apache-webhook.conf`
+- Reverse proxy: `https://facingaddictionwithhope.com/csc-webhook` → `http://127.0.0.1:5000/webhook`
+- Requires `mod_proxy` + `mod_proxy_http`
+
+### 3. `deploy/services/csc-webhook.service.template`
+- Systemd unit template (`{USER}`, `{GROUP}`, `{INSTALL_DIR}`, `{PYTHON}` placeholders)
+- Loads `.env` via `EnvironmentFile`
+
+### 4. `deploy/WEBHOOK_SETUP.md`
+- Step-by-step install guide with the generated secret
+- GitHub App settings table (Payload URL, secret, events)
+
+### 5. `tests/test_webhook_listener.py`
+- 18 tests covering: signature verification, env loading, PR trigger, HTTP responses (200/400/403/404), event filtering, health endpoint
+
+**Generated webhook secret:** `ebef3e7e93626be51b0a1e73c9f6517271c0dafdcb79be68852a39df8814514a`
+
+Add this to `/opt/csc/.env` as `GITHUB_WEBHOOK_SECRET=` and enter it in the GitHub App settings under the Payload URL `https://facingaddictionwithhope.com/csc-webhook`.
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/sonnet_1773228754.log
