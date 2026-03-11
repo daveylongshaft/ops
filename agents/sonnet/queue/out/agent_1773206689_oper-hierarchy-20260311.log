@@ -1,0 +1,44 @@
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model sonnet -p - (cwd: /opt, repo: /opt/clones/sonnet/oper-hierarchy-20260311-1773206688/repo)
+Implementation complete. Here's a summary of what was done:
+
+## Changes Made
+
+### New file: `olines.conf`
+IRC operator configuration file defining `admin` (full access) and `localop` (limited local oper) blocks with password, host mask, class, and flag lists.
+
+### `storage.py` — v2 opers schema
+- Updated `DEFAULTS["opers"]` to v2 schema with `olines` dict instead of flat `credentials`
+- Added `parse_olines_conf()` — INI parser for `olines.conf`
+- Added `reload_olines()` — re-reads conf and persists
+- Added `_migrate_opers_v1_to_v2()` — transparent backward-compat migration
+- Added `get_olines()`, `get_active_opers()`, `get_active_opers_info()`, `get_oper_flags(nick)`
+- Updated `add_active_oper()` to accept and store `oper_name`, `flags`, `class`
+- Updated `remove_active_oper()` to handle v2 dict format
+- Updated `restore_opers()` to merge conf file olines on startup
+
+### `server.py` — flag helpers, remove ServerConsole
+- Removed `from server_console import ServerConsole` import
+- Removed `self.console = ServerConsole(self)` from `__init__`
+- Updated `opers` property to read from v2 active_opers dicts
+- Updated `oper_credentials` property to read from olines
+- Added `active_opers_info` property
+- Added `oper_has_flag(nick, flag)` method
+- Added `get_olines()` method
+
+### `server_message_handler.py` — new commands
+- **OPER**: now stores oper_name, flags, class on auth; sends class in reply
+- **KILL**: checks `kill` flag (not just oper status)
+- **CONNECT**: checks `connect` flag
+- **SQUIT**: checks `squit` flag
+- **TRUST**: ADD/REMOVE/LIST trusted nicks (requires `trust` flag)
+- **SETMOTD**: set MOTD (requires `setmotd` flag)
+- **STATS o/u/m/c**: O-lines, uptime, active opers, client count (requires `stats` flag)
+- **REHASH**: reload olines.conf (requires `rehash` flag)
+- **SHUTDOWN**: stop server (requires `shutdown` flag)
+- **LOCALCONFIG**: get/set/list local config values (requires `localconfig` flag)
+
+### `tests/test_oper_hierarchy.py`
+80+ unit tests covering schema migration, olines parsing, CRUD operations, server properties, and all new IRC command handlers.
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/sonnet_1773206689.log

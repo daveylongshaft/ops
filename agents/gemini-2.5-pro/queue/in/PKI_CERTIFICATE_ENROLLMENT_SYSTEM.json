@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-11T05:24:41Z",
-    "agent_name": "sonnet",
-    "workorder_name": "oper-hierarchy-20260311.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/oper-hierarchy-20260311.md",
+    "timestamp": "2026-03-11T08:06:12Z",
+    "agent_name": "gemini-2.5-pro",
+    "workorder_name": "PKI_CERTIFICATE_ENROLLMENT_SYSTEM.md",
+    "original_prompt_path": "/opt/csc/ops/wo/ready/PKI_CERTIFICATE_ENROLLMENT_SYSTEM.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
