@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-11T01:36:45Z",
-    "agent_name": "sonnet",
-    "workorder_name": "PROMPT_review_pr_daveylongshaft_irc_3_20260310-202906.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/PROMPT_review_pr_daveylongshaft_irc_3_20260310-202906.md",
+    "timestamp": "2026-03-11T05:21:54Z",
+    "agent_name": "gemini-2.5-pro",
+    "workorder_name": "oper-hierarchy-20260311.md",
+    "original_prompt_path": "/opt/csc/ops/wo/ready/oper-hierarchy-20260311.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
