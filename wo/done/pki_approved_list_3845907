@@ -1,0 +1,10 @@
+PID: 3845907 starting at Thu 12 Mar 2026 10:33:33 AM CDT
+task: implement PKI approved server list + auto-renewal + S2S enrollment hints
+logging user instructions
+create irc/etc/approved_servers.json
+update enrollment_server.py
+update pki_service.py
+update pki_cmd.py - optional token
+update test_pki.py - add new test classes
+commit changes
+all done - committed and pushed
