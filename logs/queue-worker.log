@@ -12909,3 +12909,659 @@ SyntaxError: Unexpected string
 [2026-03-10 18:38:30] [queue-worker] [INFO] git pull
 [2026-03-10 18:38:31] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
 [2026-03-10 18:38:31] [queue-worker] [INFO] Cycle end
+[2026-03-12 14:56:21] [queue-worker] [INFO] ==================================================
+[2026-03-12 14:56:21] [queue-worker] [INFO] Cycle start
+[2026-03-12 14:56:21] [queue-worker] [INFO] git pull
+[2026-03-12 14:56:23] [queue-worker] [WARN] Cleaned up orphaned orders.md from opus/queue/work/ -> out/orders-orphan-1773345383.md
+[2026-03-12 14:56:23] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 14:56:23] [queue-worker] [INFO] Cycle end
+[2026-03-12 14:56:23] [queue-worker] [INFO] ==================================================
+[2026-03-12 14:56:23] [queue-worker] [INFO] Cycle start
+[2026-03-12 14:56:23] [queue-worker] [INFO] git pull
+[2026-03-12 14:56:24] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 14:56:24] [queue-worker] [INFO] Cycle end
+[2026-03-12 14:57:57] [queue-worker] [INFO] ==================================================
+[2026-03-12 14:57:57] [queue-worker] [INFO] Cycle start
+[2026-03-12 14:57:57] [queue-worker] [INFO] git pull
+[2026-03-12 14:57:58] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 14:57:58] [queue-worker] [INFO] Cycle end
+[2026-03-12 14:57:58] [queue-worker] [INFO] ==================================================
+[2026-03-12 14:57:58] [queue-worker] [INFO] Cycle start
+[2026-03-12 14:57:58] [queue-worker] [INFO] git pull
+[2026-03-12 14:57:58] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 14:57:58] [queue-worker] [INFO] Cycle end
+[2026-03-12 14:59:25] [queue-worker] [INFO] ==================================================
+[2026-03-12 14:59:25] [queue-worker] [INFO] Cycle start
+[2026-03-12 14:59:25] [queue-worker] [INFO] git pull
+[2026-03-12 14:59:25] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 14:59:25] [queue-worker] [INFO] Cycle end
+[2026-03-12 14:59:26] [queue-worker] [INFO] ==================================================
+[2026-03-12 14:59:26] [queue-worker] [INFO] Cycle start
+[2026-03-12 14:59:26] [queue-worker] [INFO] git pull
+[2026-03-12 14:59:26] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 14:59:26] [queue-worker] [INFO] Cycle end
+[2026-03-12 15:00:35] [queue-worker] [INFO] ==================================================
+[2026-03-12 15:00:35] [queue-worker] [INFO] Cycle start
+[2026-03-12 15:00:35] [queue-worker] [INFO] git pull
+[2026-03-12 15:00:35] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 15:00:35] [queue-worker] [INFO] Cycle end
+[2026-03-12 15:00:35] [queue-worker] [INFO] ==================================================
+[2026-03-12 15:00:35] [queue-worker] [INFO] Cycle start
+[2026-03-12 15:00:35] [queue-worker] [INFO] git pull
+[2026-03-12 15:00:35] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 15:00:35] [queue-worker] [INFO] Cycle end
+[2026-03-12 15:01:43] [queue-worker] [INFO] ==================================================
+[2026-03-12 15:01:43] [queue-worker] [INFO] Cycle start
+[2026-03-12 15:01:43] [queue-worker] [INFO] git pull
+[2026-03-12 15:01:45] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 15:01:45] [queue-worker] [INFO] Cycle end
+[2026-03-12 15:01:45] [queue-worker] [INFO] ==================================================
+[2026-03-12 15:01:45] [queue-worker] [INFO] Cycle start
+[2026-03-12 15:01:45] [queue-worker] [INFO] git pull
+[2026-03-12 15:01:46] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 15:01:46] [queue-worker] [INFO] Cycle end
+[2026-03-12 15:02:52] [queue-worker] [INFO] ==================================================
+[2026-03-12 15:02:52] [queue-worker] [INFO] Cycle start
+[2026-03-12 15:02:52] [queue-worker] [INFO] git pull
+[2026-03-12 15:02:55] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 15:02:55] [queue-worker] [INFO] Cycle end
+[2026-03-12 15:02:55] [queue-worker] [INFO] ==================================================
+[2026-03-12 15:02:55] [queue-worker] [INFO] Cycle start
+[2026-03-12 15:02:55] [queue-worker] [INFO] git pull
+[2026-03-12 15:02:56] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 15:02:56] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:04:43] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:04:43] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:04:43] [queue-worker] [INFO] git pull
+[2026-03-12 16:04:45] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:04:45] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:04:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:04:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:04:46] [queue-worker] [INFO] git pull
+[2026-03-12 16:04:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:04:48] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:05:04] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:05:04] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:05:04] [queue-worker] [INFO] git pull
+[2026-03-12 16:05:05] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:05:05] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:06:05] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:06:05] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:06:05] [queue-worker] [INFO] git pull
+[2026-03-12 16:06:07] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:06:07] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:06:07] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:06:07] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:06:07] [queue-worker] [INFO] git pull
+[2026-03-12 16:06:09] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:06:09] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:07:22] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:07:22] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:07:22] [queue-worker] [INFO] git pull
+[2026-03-12 16:07:24] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:07:24] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:07:24] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:07:24] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:07:24] [queue-worker] [INFO] git pull
+[2026-03-12 16:07:26] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:07:26] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:08:38] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:08:38] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:08:38] [queue-worker] [INFO] git pull
+[2026-03-12 16:08:40] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:08:40] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:08:40] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:08:40] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:08:40] [queue-worker] [INFO] git pull
+[2026-03-12 16:08:43] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:08:43] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:17:39] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:17:39] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:17:39] [queue-worker] [INFO] git pull
+[2026-03-12 16:17:41] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:17:41] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:17:41] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:17:41] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:17:41] [queue-worker] [INFO] git pull
+[2026-03-12 16:17:43] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:17:43] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:18:53] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:18:53] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:18:53] [queue-worker] [INFO] git pull
+[2026-03-12 16:18:54] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:18:54] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:18:54] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:18:54] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:18:54] [queue-worker] [INFO] git pull
+[2026-03-12 16:18:56] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:18:56] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:20:06] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:20:06] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:20:06] [queue-worker] [INFO] git pull
+[2026-03-12 16:20:08] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:20:08] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:20:08] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:20:08] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:20:08] [queue-worker] [INFO] git pull
+[2026-03-12 16:20:10] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:20:10] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:21:20] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:21:20] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:21:20] [queue-worker] [INFO] git pull
+[2026-03-12 16:21:22] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:21:22] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:21:22] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:21:22] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:21:22] [queue-worker] [INFO] git pull
+[2026-03-12 16:21:24] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:21:24] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:22:34] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:22:34] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:22:34] [queue-worker] [INFO] git pull
+[2026-03-12 16:22:36] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:22:36] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:22:36] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:22:36] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:22:36] [queue-worker] [INFO] git pull
+[2026-03-12 16:22:38] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:22:38] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:23:49] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:23:49] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:23:49] [queue-worker] [INFO] git pull
+[2026-03-12 16:23:51] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:23:51] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:23:51] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:23:51] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:23:51] [queue-worker] [INFO] git pull
+[2026-03-12 16:23:53] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:23:53] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:25:03] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:25:03] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:25:03] [queue-worker] [INFO] git pull
+[2026-03-12 16:25:06] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:25:06] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:25:06] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:25:06] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:25:06] [queue-worker] [INFO] git pull
+[2026-03-12 16:25:08] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:25:08] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:26:18] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:26:18] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:26:18] [queue-worker] [INFO] git pull
+[2026-03-12 16:26:20] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:26:20] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:26:20] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:26:20] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:26:20] [queue-worker] [INFO] git pull
+[2026-03-12 16:26:21] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:26:21] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:27:31] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:27:31] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:27:31] [queue-worker] [INFO] git pull
+[2026-03-12 16:27:33] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:27:33] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:27:33] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:27:33] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:27:33] [queue-worker] [INFO] git pull
+[2026-03-12 16:27:36] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:27:36] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:28:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:28:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:28:46] [queue-worker] [INFO] git pull
+[2026-03-12 16:28:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:28:48] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:28:48] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:28:48] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:28:48] [queue-worker] [INFO] git pull
+[2026-03-12 16:28:50] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:28:50] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:29:54] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:29:54] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:29:54] [queue-worker] [INFO] git pull
+[2026-03-12 16:29:55] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:29:55] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:29:55] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:29:55] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:29:55] [queue-worker] [INFO] git pull
+[2026-03-12 16:29:57] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:29:57] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:31:08] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:31:08] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:31:08] [queue-worker] [INFO] git pull
+[2026-03-12 16:31:10] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:31:10] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:31:10] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:31:10] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:31:10] [queue-worker] [INFO] git pull
+[2026-03-12 16:31:13] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:31:13] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:31:31] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:31:31] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:31:31] [queue-worker] [INFO] git pull
+[2026-03-12 16:31:33] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:31:33] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:31:33] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:31:33] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:31:33] [queue-worker] [INFO] git pull
+[2026-03-12 16:31:35] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:31:35] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:32:20] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:32:20] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:32:20] [queue-worker] [INFO] git pull
+[2026-03-12 16:32:22] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:32:22] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:32:22] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:32:22] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:32:22] [queue-worker] [INFO] git pull
+[2026-03-12 16:32:24] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:32:24] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:33:35] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:33:35] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:33:35] [queue-worker] [INFO] git pull
+[2026-03-12 16:33:36] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:33:36] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:33:37] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:33:37] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:33:37] [queue-worker] [INFO] git pull
+[2026-03-12 16:33:38] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:33:38] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:34:02] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:34:02] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:34:02] [queue-worker] [INFO] git pull
+[2026-03-12 16:34:04] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:34:04] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:34:04] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:34:04] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:34:04] [queue-worker] [INFO] git pull
+[2026-03-12 16:34:06] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:34:06] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:35:17] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:35:17] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:35:17] [queue-worker] [INFO] git pull
+[2026-03-12 16:35:19] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:35:19] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:35:19] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:35:19] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:35:19] [queue-worker] [INFO] git pull
+[2026-03-12 16:35:21] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:35:21] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:35:47] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:35:47] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:35:47] [queue-worker] [INFO] git pull
+[2026-03-12 16:35:49] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:35:49] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:35:49] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:35:49] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:35:49] [queue-worker] [INFO] git pull
+[2026-03-12 16:35:51] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:35:51] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:37:01] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:37:01] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:37:01] [queue-worker] [INFO] git pull
+[2026-03-12 16:37:03] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:37:03] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:37:03] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:37:03] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:37:03] [queue-worker] [INFO] git pull
+[2026-03-12 16:37:05] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:37:05] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:38:16] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:38:16] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:38:16] [queue-worker] [INFO] git pull
+[2026-03-12 16:38:18] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:38:18] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:38:18] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:38:18] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:38:18] [queue-worker] [INFO] git pull
+[2026-03-12 16:38:20] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:38:20] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:39:30] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:39:30] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:39:30] [queue-worker] [INFO] git pull
+[2026-03-12 16:39:32] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:39:32] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:39:32] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:39:32] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:39:32] [queue-worker] [INFO] git pull
+[2026-03-12 16:39:34] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:39:34] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:40:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:40:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:40:46] [queue-worker] [INFO] git pull
+[2026-03-12 16:40:47] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:40:47] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:40:47] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:40:47] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:40:47] [queue-worker] [INFO] git pull
+[2026-03-12 16:40:49] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:40:49] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:42:00] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:42:01] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:42:01] [queue-worker] [INFO] git pull
+[2026-03-12 16:42:02] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:42:02] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:42:02] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:42:02] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:42:02] [queue-worker] [INFO] git pull
+[2026-03-12 16:42:04] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:42:04] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:43:16] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:43:16] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:43:16] [queue-worker] [INFO] git pull
+[2026-03-12 16:43:19] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:43:19] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:43:19] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:43:19] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:43:19] [queue-worker] [INFO] git pull
+[2026-03-12 16:43:21] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:43:21] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:56:44] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:56:44] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:56:44] [queue-worker] [INFO] git pull
+[2026-03-12 16:56:47] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:56:47] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:56:47] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:56:47] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:56:47] [queue-worker] [INFO] git pull
+[2026-03-12 16:56:49] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:56:49] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:57:43] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:57:43] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:57:43] [queue-worker] [INFO] git pull
+[2026-03-12 16:57:46] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:57:46] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:57:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:57:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:57:46] [queue-worker] [INFO] git pull
+[2026-03-12 16:57:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:57:48] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:59:01] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:59:01] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:59:01] [queue-worker] [INFO] git pull
+[2026-03-12 16:59:02] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:59:02] [queue-worker] [INFO] Cycle end
+[2026-03-12 16:59:03] [queue-worker] [INFO] ==================================================
+[2026-03-12 16:59:03] [queue-worker] [INFO] Cycle start
+[2026-03-12 16:59:03] [queue-worker] [INFO] git pull
+[2026-03-12 16:59:04] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 16:59:04] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:00:14] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:00:14] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:00:14] [queue-worker] [INFO] git pull
+[2026-03-12 17:00:16] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:00:16] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:00:16] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:00:16] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:00:16] [queue-worker] [INFO] git pull
+[2026-03-12 17:00:18] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:00:18] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:01:30] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:01:30] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:01:30] [queue-worker] [INFO] git pull
+[2026-03-12 17:01:31] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:01:31] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:01:32] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:01:32] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:01:32] [queue-worker] [INFO] git pull
+[2026-03-12 17:01:33] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:01:33] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:02:44] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:02:44] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:02:44] [queue-worker] [INFO] git pull
+[2026-03-12 17:02:46] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:02:46] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:02:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:02:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:02:46] [queue-worker] [INFO] git pull
+[2026-03-12 17:02:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:02:48] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:03:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:03:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:03:46] [queue-worker] [INFO] git pull
+[2026-03-12 17:03:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:03:48] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:03:48] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:03:48] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:03:48] [queue-worker] [INFO] git pull
+[2026-03-12 17:03:50] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:03:50] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:05:02] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:05:02] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:05:02] [queue-worker] [INFO] git pull
+[2026-03-12 17:05:04] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:05:04] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:05:04] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:05:04] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:05:04] [queue-worker] [INFO] git pull
+[2026-03-12 17:05:06] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:05:06] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:05:25] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:05:26] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:05:26] [queue-worker] [INFO] git pull
+[2026-03-12 17:05:27] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:05:27] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:05:27] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:05:27] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:05:27] [queue-worker] [INFO] git pull
+[2026-03-12 17:05:29] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:05:29] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:45:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:45:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:45:46] [queue-worker] [INFO] git pull
+[2026-03-12 17:45:47] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:45:47] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:45:47] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:45:47] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:45:47] [queue-worker] [INFO] git pull
+[2026-03-12 17:45:47] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:45:47] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:53:29] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:53:29] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:53:29] [queue-worker] [INFO] git pull
+[2026-03-12 17:53:42] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:53:42] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:53:42] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:53:42] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:53:42] [queue-worker] [INFO] git pull
+[2026-03-12 17:53:54] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:53:54] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:55:55] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:55:55] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:55:55] [queue-worker] [INFO] git pull
+[2026-03-12 17:56:07] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:56:07] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:56:07] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:56:07] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:56:07] [queue-worker] [INFO] git pull
+[2026-03-12 17:56:19] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:56:19] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:57:32] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:57:32] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:57:32] [queue-worker] [INFO] git pull
+[2026-03-12 17:57:44] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:57:44] [queue-worker] [INFO] Cycle end
+[2026-03-12 17:57:45] [queue-worker] [INFO] ==================================================
+[2026-03-12 17:57:45] [queue-worker] [INFO] Cycle start
+[2026-03-12 17:57:45] [queue-worker] [INFO] git pull
+[2026-03-12 17:58:35] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 17:58:35] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:00:58] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:00:58] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:00:58] [queue-worker] [INFO] git pull
+[2026-03-12 18:00:58] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:00:58] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:00:58] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:00:58] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:00:58] [queue-worker] [INFO] git pull
+[2026-03-12 18:00:58] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:00:58] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:02:34] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:02:34] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:02:34] [queue-worker] [INFO] git pull
+[2026-03-12 18:03:18] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:03:18] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:03:18] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:03:18] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:03:18] [queue-worker] [INFO] git pull
+[2026-03-12 18:04:00] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:04:00] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:04:46] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:04:46] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:04:46] [queue-worker] [INFO] git pull
+[2026-03-12 18:04:47] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:04:47] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:04:47] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:04:47] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:04:47] [queue-worker] [INFO] git pull
+[2026-03-12 18:04:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:04:48] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:05:55] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:05:55] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:05:55] [queue-worker] [INFO] git pull
+[2026-03-12 18:05:56] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:05:56] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:05:56] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:05:56] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:05:56] [queue-worker] [INFO] git pull
+[2026-03-12 18:05:57] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:05:57] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:06:48] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:06:48] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:06:48] [queue-worker] [INFO] git pull
+[2026-03-12 18:06:49] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:06:49] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:06:49] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:06:49] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:06:49] [queue-worker] [INFO] git pull
+[2026-03-12 18:06:50] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:06:50] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:07:57] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:07:57] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:07:57] [queue-worker] [INFO] git pull
+[2026-03-12 18:07:58] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:07:58] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:07:58] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:07:58] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:07:58] [queue-worker] [INFO] git pull
+[2026-03-12 18:07:59] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:07:59] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:09:05] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:09:05] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:09:05] [queue-worker] [INFO] git pull
+[2026-03-12 18:09:06] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:09:06] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:09:06] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:09:06] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:09:06] [queue-worker] [INFO] git pull
+[2026-03-12 18:09:07] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:09:07] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:10:14] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:10:14] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:10:14] [queue-worker] [INFO] git pull
+[2026-03-12 18:10:15] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:10:15] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:10:16] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:10:16] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:10:16] [queue-worker] [INFO] git pull
+[2026-03-12 18:10:17] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:10:17] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:11:24] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:11:24] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:11:24] [queue-worker] [INFO] git pull
+[2026-03-12 18:11:25] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:11:25] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:11:25] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:11:25] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:11:25] [queue-worker] [INFO] git pull
+[2026-03-12 18:11:26] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:11:26] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:12:34] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:12:34] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:12:34] [queue-worker] [INFO] git pull
+[2026-03-12 18:12:35] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:12:35] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:12:35] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:12:35] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:12:35] [queue-worker] [INFO] git pull
+[2026-03-12 18:12:36] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:12:36] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:13:43] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:13:43] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:13:43] [queue-worker] [INFO] git pull
+[2026-03-12 18:13:45] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:13:45] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:13:45] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:13:45] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:13:45] [queue-worker] [INFO] git pull
+[2026-03-12 18:13:46] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:13:46] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:14:54] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:14:54] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:14:54] [queue-worker] [INFO] git pull
+[2026-03-12 18:14:55] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:14:55] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:14:55] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:14:55] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:14:55] [queue-worker] [INFO] git pull
+[2026-03-12 18:14:57] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:14:57] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:16:04] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:16:04] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:16:04] [queue-worker] [INFO] git pull
+[2026-03-12 18:16:05] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:16:05] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:16:05] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:16:05] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:16:05] [queue-worker] [INFO] git pull
+[2026-03-12 18:16:06] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:16:06] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:17:13] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:17:13] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:17:13] [queue-worker] [INFO] git pull
+[2026-03-12 18:17:14] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:17:14] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:17:14] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:17:14] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:17:14] [queue-worker] [INFO] git pull
+[2026-03-12 18:17:16] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:17:16] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:18:24] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:18:24] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:18:24] [queue-worker] [INFO] git pull
+[2026-03-12 18:18:25] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:18:25] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:18:25] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:18:25] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:18:25] [queue-worker] [INFO] git pull
+[2026-03-12 18:18:26] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:18:26] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:19:34] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:19:34] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:19:34] [queue-worker] [INFO] git pull
+[2026-03-12 18:19:35] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:19:35] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:19:35] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:19:35] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:19:35] [queue-worker] [INFO] git pull
+[2026-03-12 18:19:36] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:19:36] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:20:43] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:20:43] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:20:43] [queue-worker] [INFO] git pull
+[2026-03-12 18:20:44] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:20:44] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:20:44] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:20:44] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:20:44] [queue-worker] [INFO] git pull
+[2026-03-12 18:20:46] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:20:46] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:22:45] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:22:45] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:22:45] [queue-worker] [INFO] git pull
+[2026-03-12 18:22:47] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:22:47] [queue-worker] [INFO] Cycle end
+[2026-03-12 18:22:47] [queue-worker] [INFO] ==================================================
+[2026-03-12 18:22:47] [queue-worker] [INFO] Cycle start
+[2026-03-12 18:22:47] [queue-worker] [INFO] git pull
+[2026-03-12 18:22:48] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-12 18:22:48] [queue-worker] [INFO] Cycle end
