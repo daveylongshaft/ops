@@ -162,3 +162,13 @@ Step 7: Update server/server_message_handler.py
 - Data is generic I/O, usable by any subsystem
 - Storage backend swap: change only _read_json_file / _write_json_file
 
+
+
+--- Agent Log ---
+ERROR: Workorder not found: ops\agents\opus\queue\work\orders.md
+
+
+--- Verify/Complete or Finish ---
+Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
