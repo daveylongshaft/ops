@@ -1,0 +1,19 @@
+[run_agent] Agent: sonnet, Root: C:\csc, WIP: improve_delete_duplicate_handlers.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Anthropic API (claude-sonnet-4-5-20250929) for sonnet
+[run_agent] System prompt: 1,038 chars (cached)
+[run_agent] User prompt: 551 chars
+[run_agent] Tools: 6 defined, max 100 turns, max_tokens=32768
+
+[run_agent] Fatal API error on turn 0: AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CYzxT6uscFHutyX41fvaH'}
+C:\csc\irc\packages\csc-service\csc_service\shared\config_schemas.py:62: SyntaxWarning: invalid escape sequence '\['
+  "^[a-zA-Z0-9_`{\[\]}\|\^\-]+$": {
+C:\csc\irc\packages\csc-service\csc_service\shared\config_schemas.py:92: SyntaxWarning: invalid escape sequence '\['
+  "^[a-zA-Z0-9_`{\[\]}\|\^\-]+$": {
+[2026-03-13 05:55:12] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:55:12] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:55:12] [queue-worker] [INFO] git pull
+Store data successful. Saved 1 items to 'C:\Users\davey\AppData\Local\Temp\csc\run\queue_worker_data.json'.
+[2026-03-13 05:55:13] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:55:13] [queue-worker] [INFO] Cycle end (idle)

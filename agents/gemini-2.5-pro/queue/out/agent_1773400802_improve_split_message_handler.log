@@ -1,0 +1,51 @@
+[run_agent] Agent: gemini-2.5-pro, Root: C:\csc, WIP: improve_split_message_handler.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Starting Gemini (gemini-2.5-pro) for gemini-2.5-pro
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+I will now begin the work order to refactor `server_message_handler.py`. First, I'll create the necessary directory structure for the new handlers.
+C:\Users\davey\AppData\Roaming\npm\node_modules\@google\gemini-cli\node_modules\@lydell\node-pty\conpty_console_list_agent.js:11
+var consoleProcessList = getConsoleProcessList(shellPid);
+                         ^
+
+Error: AttachConsole failed
+    at Object.<anonymous> (C:\Users\davey\AppData\Roaming\npm\node_modules\@google\gemini-cli\node_modules\@lydell\node-pty\conpty_console_list_agent.js:11:26)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.13.0
+Error when talking to Gemini API Full report available at: C:\Users\davey\AppData\Local\Temp\gemini-client-error-Turn.run-sendMessageStream-2026-03-13T11-20-52-875Z.json TerminalQuotaError: You have exhausted your capacity on this model. Your quota will reset after 20h58m31s.
+    at classifyGoogleError (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/googleQuotaErrors.js:238:28)
+    at retryWithBackoff (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/retry.js:153:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:445:32)
+    at async GeminiChat.streamWithRetries (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:265:40)
+    at async Turn.run (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/turn.js:70:30)
+    at async GeminiClient.processTurn (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:478:26)
+    at async GeminiClient.sendMessageStream (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:579:20)
+    at async file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/dist/src/nonInteractiveCli.js:194:34
+    at async main (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/dist/src/gemini.js:531:9) {
+  cause: {
+    code: 429,
+    message: 'You have exhausted your capacity on this model. Your quota will reset after 20h58m31s.',
+    details: [ [Object], [Object] ]
+  },
+  retryDelayMs: 75511109.932014,
+  reason: 'QUOTA_EXHAUSTED'
+}
+An unexpected critical error occurred:[object Object]
+[2026-03-13 06:20:53] [queue-worker] [INFO] ==================================================
+[2026-03-13 06:20:53] [queue-worker] [INFO] Cycle start
+[2026-03-13 06:20:53] [queue-worker] [INFO] git pull
+Store data successful. Saved 1 items to 'C:\Users\davey\AppData\Local\Temp\csc\run\queue_worker_data.json'.
+[2026-03-13 06:20:54] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 06:20:54] [queue-worker] [INFO] Cycle end (idle)

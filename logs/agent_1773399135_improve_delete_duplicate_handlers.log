@@ -1,0 +1,20 @@
+[run_agent] Agent: gemini-2.5-pro, Root: C:\csc, WIP: improve_delete_duplicate_handlers.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Starting Gemini (gemini-2.5-pro) for gemini-2.5-pro
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+C:\csc\irc\packages\csc-service\csc_service\shared\config_schemas.py:62: SyntaxWarning: invalid escape sequence '\['
+  "^[a-zA-Z0-9_`{\[\]}\|\^\-]+$": {
+C:\csc\irc\packages\csc-service\csc_service\shared\config_schemas.py:92: SyntaxWarning: invalid escape sequence '\['
+  "^[a-zA-Z0-9_`{\[\]}\|\^\-]+$": {
+[2026-03-13 05:52:33] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:52:33] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:52:33] [queue-worker] [INFO] git pull
+Store data successful. Saved 1 items to 'C:\Users\davey\AppData\Local\Temp\csc\run\queue_worker_data.json'.
+[2026-03-13 05:52:34] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:52:34] [queue-worker] [INFO] Cycle end (idle)

@@ -357,3 +357,101 @@ csc_service/shared/data.py               167     25    85%   78-82, 145-149
 ---------------------------------------------------------------------
 TOTAL                                   1835    344    81%
 ```
+
+
+--- Agent Log ---
+[run_agent] Agent: gemini-2.5-pro, Root: C:\csc, WIP: improve_test_coverage.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Starting Gemini (gemini-2.5-pro) for gemini-2.5-pro
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Error when talking to Gemini API Full report available at: C:\Users\davey\AppData\Local\Temp\gemini-client-error-Turn.run-sendMessageStream-2026-03-13T11-31-27-045Z.json TerminalQuotaError: You have exhausted your capacity on this model. Your quota will reset after 20h47m56s.
+    at classifyGoogleError (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/googleQuotaErrors.js:238:28)
+    at retryWithBackoff (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/retry.js:153:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:445:32)
+    at async GeminiChat.streamWithRetries (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:265:40)
+    at async Turn.run (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/turn.js:70:30)
+    at async GeminiClient.processTurn (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:478:26)
+    at async GeminiClient.sendMessageStream (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:579:20)
+    at async file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/dist/src/nonInteractiveCli.js:194:34
+    at async main (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/dist/src/gemini.js:531:9) {
+  cause: {
+    code: 429,
+    message: 'You have exhausted your capacity on this model. Your quota will reset after 20h47m56s.',
+    details: [ [Object], [Object] ]
+  },
+  retryDelayMs: 74876922.169567,
+  reason: 'QUOTA_EXHAUSTED'
+}
+An unexpected critical error occurred:[object Object]
+[2026-03-13 06:31:27] [queue-worker] [INFO] ==================================================
+[2026-03-13 06:31:27] [queue-worker] [INFO] Cycle start
+[2026-03-13 06:31:27] [queue-worker] [INFO] git pull
+Store data successful. Saved 1 items to 'C:\Users\davey\AppData\Local\Temp\csc\run\queue_worker_data.json'.
+[2026-03-13 06:31:28] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 06:31:28] [queue-worker] [INFO] Cycle end (idle)
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+
+
+--- Agent Log ---
+[run_agent] Agent: gemini-2.5-pro, Root: C:\csc, WIP: improve_test_coverage.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Starting Gemini (gemini-2.5-pro) for gemini-2.5-pro
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Error when talking to Gemini API Full report available at: C:\Users\davey\AppData\Local\Temp\gemini-client-error-Turn.run-sendMessageStream-2026-03-13T11-31-48-380Z.json TerminalQuotaError: You have exhausted your capacity on this model. Your quota will reset after 20h47m35s.
+    at classifyGoogleError (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/googleQuotaErrors.js:238:28)
+    at retryWithBackoff (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/utils/retry.js:153:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:445:32)
+    at async GeminiChat.streamWithRetries (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/geminiChat.js:265:40)
+    at async Turn.run (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/turn.js:70:30)
+    at async GeminiClient.processTurn (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:478:26)
+    at async GeminiClient.sendMessageStream (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/core/client.js:579:20)
+    at async file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/dist/src/nonInteractiveCli.js:194:34
+    at async main (file:///C:/Users/davey/AppData/Roaming/npm/node_modules/@google/gemini-cli/dist/src/gemini.js:531:9) {
+  cause: {
+    code: 429,
+    message: 'You have exhausted your capacity on this model. Your quota will reset after 20h47m35s.',
+    details: [ [Object], [Object] ]
+  },
+  retryDelayMs: 74855586.58341,
+  reason: 'QUOTA_EXHAUSTED'
+}
+An unexpected critical error occurred:[object Object]
+[2026-03-13 06:31:48] [queue-worker] [INFO] ==================================================
+[2026-03-13 06:31:48] [queue-worker] [INFO] Cycle start
+[2026-03-13 06:31:48] [queue-worker] [INFO] git pull
+Store data successful. Saved 1 items to 'C:\Users\davey\AppData\Local\Temp\csc\run\queue_worker_data.json'.
+[2026-03-13 06:31:49] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 06:31:49] [queue-worker] [INFO] Cycle end (idle)
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
+
+
+--- Agent Log ---
+[run_agent] Agent: sonnet, Root: C:\csc, WIP: improve_test_coverage.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Anthropic API (claude-sonnet-4-5-20250929) for sonnet
+[run_agent] System prompt: 1,038 chars (cached)
+[run_agent] User prompt: 491 chars
+[run_agent] Tools: 6 defined, max 100 turns, max_tokens=32768
+
+[run_agent] Fatal API error on turn 0: AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CZ11FyXR147sMFjvLPSgK'}
+[2026-03-13 06:32:01] [queue-worker] [INFO] ==================================================
+[2026-03-13 06:32:01] [queue-worker] [INFO] Cycle start
+[2026-03-13 06:32:01] [queue-worker] [INFO] git pull
+Store data successful. Saved 1 items to 'C:\Users\davey\AppData\Local\Temp\csc\run\queue_worker_data.json'.
+[2026-03-13 06:32:02] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 06:32:02] [queue-worker] [INFO] Cycle end (idle)
+
+INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
