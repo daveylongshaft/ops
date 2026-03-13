@@ -865,6 +865,12 @@ Read and complete this workorder:
         print(f"[run_agent] WARNING: Unknown agent '{agent_name}', defaulting to haiku via API")
         rc = run_anthropic_api(agent_name, "claude-haiku-4-5-20251001", user_prompt, csc_root)
 
+    # Trigger queue-worker to process completion and pull next workorder
+    try:
+        subprocess.run(["csc-ctl", "cycle", "queue-worker"], timeout=30, capture_output=True)
+    except Exception as e:
+        print(f"[run_agent] Note: queue-worker trigger failed: {e}")
+
     sys.exit(rc)
 
 
