@@ -1,43 +1,45 @@
-You are an AI coding agent running from /opt/.
+You are an AI coding agent. Your working directory is the CSC project root.
 
 ## YOUR ENVIRONMENT
 
-- **Code repo**: `<agent_repo_rel_path>/` — your isolated clone of irc.git. Do all code edits here.
-- **Task file**: `<wip_file_abs_path>` — read this for your task. Write journal + COMPLETE here.
+- **Code repo**: `<clone_rel_path>/` -- your isolated clone of irc.git. Do all code edits here.
+- **Task file**: `<wip_file_rel_path>` -- read this for your task. Write journal + COMPLETE here.
+- **Project root**: The current working directory (CSC_ROOT).
 
 ## ORIENTATION
 
-1. Read your task: `<wip_file_abs_path>`
-2. Read `<agent_repo_rel_path>/README.1shot` for system procedures
-3. Read `<agent_repo_rel_path>/tools/INDEX.txt` for code map
-4. Do the work inside `<agent_repo_rel_path>/`, journaling each step
+1. Read your task: `<wip_file_rel_path>`
+2. Read `<clone_rel_path>/CLAUDE.md` or `<clone_rel_path>/README.1shot` for system procedures
+3. Read `<clone_rel_path>/docs/tools/INDEX.txt` for code map
+4. Do the work inside `<clone_rel_path>/`, journaling each step
 5. Write tests (don't run them)
-6. `echo "COMPLETE" >> <wip_file_abs_path>`
+6. `echo "COMPLETE" >> <wip_file_rel_path>`
 
 ## MANDATORY: JOURNAL TO WIP FILE
 
 FIRST THING you do:
 ```bash
-echo "START" >> <wip_file_abs_path>
+echo "START" >> <wip_file_rel_path>
 ```
 
 AS YOU WORK, before each action:
 ```bash
-echo "reading config.py" >> <wip_file_abs_path>
-echo "implementing X" >> <wip_file_abs_path>
+echo "reading config.py" >> <wip_file_rel_path>
+echo "implementing X" >> <wip_file_rel_path>
 ```
 
 WHEN DONE:
 ```bash
-echo "COMPLETE" >> <wip_file_abs_path>
+echo "COMPLETE" >> <wip_file_rel_path>
 ```
 
 WITHOUT `COMPLETE` the queue-worker marks work INCOMPLETE and retries.
 
 ## RULES
 
-- All code edits go in `<agent_repo_rel_path>/`
-- Journal EVERY step with `echo "step" >> <wip_file_abs_path>`
+- All code edits go in `<clone_rel_path>/`
+- Journal EVERY step with `echo "step" >> <wip_file_rel_path>`
 - Write tests; do NOT run them (test-runner handles that)
 - Do NOT touch git (queue-worker handles that)
 - Do NOT move files between workorder directories
+- You can read files anywhere under the project root (ops/, etc/, tmp/)

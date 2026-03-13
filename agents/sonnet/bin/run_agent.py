@@ -670,9 +670,9 @@ def run_gemini(agent_name: str, model: str, workorder_content: str, csc_root: Pa
     We write workorder to a temp file and use a wrapper batch script
     that runs in its own console window, redirecting output back to stdout.
     """
-    gemini_cli = shutil.which("gemini-cli")
+    gemini_cli = shutil.which("gemini") or shutil.which("gemini-cli")
     if not gemini_cli:
-        print("[run_agent] ERROR: gemini-cli not found in PATH (run: npm install -g @google/gemini-cli)")
+        print("[run_agent] ERROR: gemini not found in PATH (run: npm install -g @google/gemini-cli)")
         return 1
 
     import tempfile
@@ -783,14 +783,14 @@ def main():
     # Extract WIP file path from orders.md
     wip_path = None
     try:
-        match = re.search(r'workorders/wip/([^\s\n]+\.md)', workorder_content)
+        match = re.search(r'ops/wo/wip/([^\s\n]+\.md)', workorder_content)
         if match:
             wip_filename = match.group(1)
             wip_path = csc_root / "workorders" / "wip" / wip_filename
     except Exception:
         pass
 
-    wip_relative = f"workorders/wip/{wip_path.name}" if wip_path else "workorders/wip/task.md"
+    wip_relative = f"ops/wo/wip/{wip_path.name}" if wip_path else "ops/wo/wip/task.md"
 
     print(f"[run_agent] Agent: {agent_name}, Root: {csc_root}, WIP: {wip_path.name if wip_path else 'unknown'}")
 

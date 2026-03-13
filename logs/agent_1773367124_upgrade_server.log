@@ -1,0 +1,35 @@
+The task is complete. Here's a summary of what was done:
+
+## Changes Made
+
+### Bug Fix: Channel Name Case Normalization (RFC 1459)
+
+**File**: `packages/csc-service/csc_service/server/server_message_handler.py`
+
+**Problem**: When a client sent `PRIVMSG #General :hello`, the server broadcast the message with the un-normalized channel name `#General` instead of `#general`. The channel lookup worked correctly (normalized), but the output message preserved the client's mixed-case input.
+
+**Changes in `_handle_privmsg()`**:
+1. Added `normalized_target = target.lower()` before constructing output
+2. Used `normalized_target` in `format_irc_message()` call
+3. Used `normalized_target` in `chat_buffer.append()` call
+4. Used `normalized_target` in S2S routing call
+5. Used `normalized_target` in service command handler call
+6. Used `normalized_target` in file upload authorization check
+
+**Changes in `_handle_notice()`**:
+1. Added `normalized_target = target.lower()` before constructing output
+2. Used `normalized_target` in `format_irc_message()`, `broadcast_to_channel()`, and `chat_buffer.append()` calls
+
+### Updated Test: `tests/test_channel_normalization.py`
+- Fixed `test_privmsg_channel_name_normalization` to mock `_broadcast_privmsg_filtered` (the actual method called) instead of `broadcast_to_channel`
+- Fixed `test_notice_channel_name_normalization` to also verify the channel name passed to `broadcast_to_channel`
+- Added `test_privmsg_already_lowercase_unchanged` - verifies no regression for already-lowercase names
+- Added `test_privmsg_uppercase_channel_normalized` - verifies all-uppercase names are normalized
+[run_agent] Agent: opus, Root: C:\csc\tmp\csc\clones\opus\upgrade_server-1773367122\repo, WIP: unknown
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] ERROR: ANTHROPIC_API_KEY not set
+[run_agent] Falling back to Claude CLI...
+[run_agent] Starting Claude CLI (claude-opus-4-6) for opus
+[run_agent] System prompt: 1038 chars (cacheable)
+[run_agent] User prompt: 424 chars

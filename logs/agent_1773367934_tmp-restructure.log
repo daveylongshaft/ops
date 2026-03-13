@@ -167,9 +167,3 @@ Error: AttachConsole failed
     at node:internal/main/run_main_module:33:47
 
 Node.js v24.13.0
-
-
---- Verify/Complete or Finish ---
-Please verify this workorder is complete or finish the work and add COMPLETE as the last line.
-
-INCOMPLETE: Agent task did not finish properly (missing COMPLETE marker)
