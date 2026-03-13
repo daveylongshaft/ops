@@ -1,0 +1,1 @@
+PR #3 reviewed and approved. The fix is correct: adding `pr-reviewer` to `VALID_CATEGORIES` and `gemini-2.5-pro`'s `good_for` list ensures workorders with `role: pr-reviewer` front-matter are properly classified and routed rather than falling back to filename-pattern matching (which would have misclassified them as `audit`).

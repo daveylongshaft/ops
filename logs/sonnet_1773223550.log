@@ -1,0 +1,16 @@
+All four files have been created:
+
+1. **`packages/csc-service/csc_service/infra/wo_watcher.py`** — `WoWatcher` class with:
+   - inotify (Linux via `inotify_simple`) → watchdog (macOS) → polling fallback
+   - 500ms debounce batching rapid changes
+   - `_flush()` pushes via `ftplib.FTP_TLS`: STOR for changes, DELE for deletions
+   - Uploads `wo/.filelist.hash` after each push
+
+2. **`packages/csc-service/csc_service/infra/wo_sync_client.py`** — `WoSyncClient` class:
+   - Fetches remote filelist hash, compares to local
+   - Uses MLSD for recursive remote listing
+   - Downloads only changed/missing files (delta sync)
+
+3. **`tests/test_wo_watcher.py`** — 6 test classes covering detection, deletion, debounce, filelist hash, mock FTP push (STOR/DELE), and delta sync.
+
+4. **`docs/platform.md`** — documents the `wo_watcher` section of `etc/platform.json` including the `csc-ctl` integration commands.

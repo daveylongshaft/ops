@@ -1,0 +1,11 @@
+Review posted. Here's the summary:
+
+**Decision: REQUEST CHANGES** (posted as comment since GitHub blocks self-reviews)
+
+**3 of 4 fixes are correct:**
+- `server/main.py` — `main()` function properly added, entry point will work
+- `.gitignore` — runtime state files correctly excluded  
+- Bridge module migration — complete and structurally sound; minor config key mismatch (`bridge_encryption_enabled` vs `encryption_enabled`) but encryption defaults to `True` safely
+
+**1 fix is incomplete:**
+- `help_service.py` — The class rename (`help` → `Help`) is correct and necessary per `service.py:69` which calls `.capitalize()`. The attribute change from `self.server_instance` → `self.server` picks up the right object. **But `self.server.services` doesn't exist anywhere in the codebase** — `Server`/`Service` only has `self.loaded_modules`. All four references to `self.server.services` need to become `self.server.loaded_modules`. The test `ai do help` will still raise `AttributeError` as-is.

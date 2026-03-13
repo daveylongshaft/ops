@@ -780,17 +780,26 @@ def main():
         print(f"ERROR: Cannot read workorder: {e}")
         sys.exit(1)
 
-    # Extract WIP file path from orders.md
+    # Extract WIP file path from orders.md.
+    # Supports both legacy path (workorders/wip/) and current path (ops/wo/wip/).
     wip_path = None
     try:
-        match = re.search(r'workorders/wip/([^\s\n]+\.md)', workorder_content)
+        match = re.search(r'(?:ops/wo/wip|workorders/wip)/([^\s\n]+\.md)', workorder_content)
         if match:
             wip_filename = match.group(1)
-            wip_path = csc_root / "workorders" / "wip" / wip_filename
+            # Try ops/wo/wip/ first (current), fall back to workorders/wip/ (legacy)
+            for candidate_dir in ["ops/wo/wip", "workorders/wip"]:
+                candidate = csc_root / Path(candidate_dir) / wip_filename
+                if candidate.exists():
+                    wip_path = candidate
+                    break
+            if wip_path is None:
+                # Default to current location even if not found yet
+                wip_path = csc_root / "ops" / "wo" / "wip" / wip_filename
     except Exception:
         pass
 
-    wip_relative = f"workorders/wip/{wip_path.name}" if wip_path else "workorders/wip/task.md"
+    wip_relative = str(wip_path.relative_to(csc_root)).replace("\\", "/") if wip_path else "ops/wo/wip/task.md"
 
     print(f"[run_agent] Agent: {agent_name}, Root: {csc_root}, WIP: {wip_path.name if wip_path else 'unknown'}")
 

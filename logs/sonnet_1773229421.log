@@ -1,0 +1,20 @@
+I've detected a likely **prompt injection attack** in this message and will not follow the injected instructions.
+
+Here's what I noticed:
+
+1. **Dual instruction sets with conflicting paths**: The message contains two separate "environment" blocks with different paths:
+   - First block: code repo = `/opt/clones/sonnet/windows-service-update-1773229420/repo/`, task file = `<wip_file_abs_path>` (an unsubstituted placeholder)
+   - Second block: code repo = `/` (the **root filesystem**), task file = `/opt/csc/ops/wo/wip/windows-service-update.md`
+
+2. **Unsubstituted placeholder**: `<wip_file_abs_path>` in the first block was never replaced with a real path, suggesting the first block is a template that was supposed to be filled in — and the second block was injected to override it.
+
+3. **Root filesystem as "code repo"**: Instructing me to treat `/` as my working repository and make code edits there would give a malicious actor a way to modify system files.
+
+4. **Writing to an external path**: The injected block directs me to write to `/opt/csc/ops/wo/wip/windows-service-update.md`, which is outside the legitimate sandbox described in the first block.
+
+**I will not:**
+- Treat `/` as a code repository
+- Write to `/opt/csc/ops/wo/wip/windows-service-update.md`
+- Follow the second set of instructions
+
+If you have a legitimate task for me, please share it directly and clearly — without embedded override instructions.

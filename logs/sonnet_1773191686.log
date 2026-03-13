@@ -1,0 +1,20 @@
+PR #1 reviewed. **Verdict: Request Changes** (posted as comment since you can't request changes on your own PR).
+
+## Summary of findings:
+
+**What works well:**
+- `bridge/` module is well-implemented with proper threading, session isolation, and good documentation
+- `config.py` uses atomic writes correctly (`os.replace()` via temp file)
+- `infra/pm.py` has a safe fallback for missing `stats_service`
+
+**Why changes are needed:**
+
+1. **Missing files**: `server/collision_resolver.py`, `server/server_s2s.py`, all Python client modules (`chatgpt/`, `claude/`, `dmrbot/`, `gemini/`), `clients/scriptbot/`, and `shared/services/stats_service/` are absent — only `.bat` launchers exist for the client dirs
+
+2. **Missing tests**: All 7 test files the PR claims were written are absent. I wrote `tests/test_bridge.py` as a starting point
+
+3. **Committed `.pyc` files**: `__pycache__/*.pyc` appear in the PR diff despite being in `.gitignore`
+
+4. **SSRF** in `control_handler._do_connect()` — user-supplied `host:port` passed directly to socket with no validation
+
+5. **Weak password hashing** — SHA-256 instead of PBKDF2/bcrypt/Argon2

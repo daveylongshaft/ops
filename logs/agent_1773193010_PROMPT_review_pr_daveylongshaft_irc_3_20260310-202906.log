@@ -1,0 +1,5 @@
+Invoking: /home/davey/.local/bin/claude --dangerously-skip-permissions --model sonnet -p - (cwd: /opt, repo: /opt/clones/sonnet/PROMPT_review_pr_daveylongshaft_irc_3_20-1773193009/repo)
+PR #3 reviewed and approved. The fix is correct: adding `pr-reviewer` to `VALID_CATEGORIES` and `gemini-2.5-pro`'s `good_for` list ensures workorders with `role: pr-reviewer` front-matter are properly classified and routed rather than falling back to filename-pattern matching (which would have misclassified them as `audit`).
+
+[INFO] Agent execution completed
+[INFO] Log: /opt/csc/ops/logs/sonnet_1773193010.log

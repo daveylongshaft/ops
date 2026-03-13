@@ -1,8 +1,8 @@
 {
-    "timestamp": "2026-03-12T19:21:40Z",
-    "agent_name": "opus",
-    "workorder_name": "windows-service-update.md",
-    "original_prompt_path": "/opt/csc/ops/wo/ready/windows-service-update.md",
+    "timestamp": "2026-03-13T02:16:59Z",
+    "agent_name": "sonnet",
+    "workorder_name": "tmp-restructure.md",
+    "original_prompt_path": "C:\\csc\\ops\\wo\\ready\\tmp-restructure.md",
     "platform_paths": {
         "temp_root": "/opt/csc/tmp",
         "csc_agent_work": "/opt/csc/tmp/csc",
