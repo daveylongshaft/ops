@@ -1,0 +1,9 @@
+[run_agent] Agent: sonnet, Root: C:\csc, WIP: improve_fix_emoji_logs.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Anthropic API (claude-sonnet-4-5-20250929) for sonnet
+[run_agent] System prompt: 1,038 chars (cached)
+[run_agent] User prompt: 496 chars
+[run_agent] Tools: 6 defined, max 100 turns, max_tokens=32768
+
+[run_agent] Fatal API error on turn 0: AuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CYzts38sKT5bD74oi72qz'}

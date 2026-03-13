@@ -17991,3 +17991,229 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [2026-03-13 04:20:44] [queue-worker] [INFO] git pull
 [2026-03-13 04:20:45] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
 [2026-03-13 04:20:45] [queue-worker] [INFO] Cycle end
+[2026-03-13 04:49:11] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\claude\generate_9_improvement_workorders-1773395351\repo (depth=1)
+[2026-03-13 04:49:13] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\claude\generate_9_improvement_workorders-1773395351\repo
+[2026-03-13 04:53:46] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\claude\generate_9_improvement_workorders-1773395626\repo (depth=1)
+[2026-03-13 04:53:47] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\claude\generate_9_improvement_workorders-1773395626\repo
+[2026-03-13 04:56:03] [queue-worker] [INFO] ==================================================
+[2026-03-13 04:56:03] [queue-worker] [INFO] Cycle start
+[2026-03-13 04:56:03] [queue-worker] [INFO] git pull
+[2026-03-13 04:56:05] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 04:56:05] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 04:59:23] [queue-worker] [INFO] ==================================================
+[2026-03-13 04:59:23] [queue-worker] [INFO] Cycle start
+[2026-03-13 04:59:23] [queue-worker] [INFO] git pull
+[2026-03-13 04:59:24] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 04:59:24] [queue-worker] [INFO] Processing workorder: improve_fix_emoji_logs.md for agent gemini-2.5-pro
+[2026-03-13 04:59:24] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 04:59:24] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_fix_emoji_logs-1773395964\repo (depth=1)
+[2026-03-13 04:59:26] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_fix_emoji_logs-1773395964\repo
+[2026-03-13 04:59:26] [queue-worker] [INFO] Clone path (relative): tmp/clones/gemini-2.5-pro/improve_fix_emoji_logs-1773395964/repo
+[2026-03-13 04:59:26] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 04:59:26] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py
+[2026-03-13 04:59:26] [queue-worker] [INFO] Spawning agent gemini-2.5-pro (cwd=C:\csc)
+[2026-03-13 04:59:26] [queue-worker] [INFO] Agent spawned: PID=50152
+[2026-03-13 05:05:28] [queue-worker] [INFO] Agent exited: PID=50152, return_code=0
+[2026-03-13 05:05:28] [queue-worker] [INFO] Agent gemini-2.5-pro finished for improve_fix_emoji_logs.md with return code 0
+[2026-03-13 05:05:28] [queue-worker] [INFO] INCOMPLETE: improve_fix_emoji_logs.md -> ready/
+[2026-03-13 05:05:28] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:05:28] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773395966_improve_fix_emoji_logs.log
+[2026-03-13 05:05:28] [queue-worker] [INFO] Archived clone to repo-consumed-1773396328
+[2026-03-13 05:05:28] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:05:28] [queue-worker] [INFO] git commit: feat: Complete prompt 'improve_fix_emoji_logs.md'
+[2026-03-13 05:05:28] [queue-worker] [INFO] git push
+[2026-03-13 05:05:29] [queue-worker] [INFO] Cycle end (ready -> self-cycling)
+[2026-03-13 05:05:30] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:05:30] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:05:30] [queue-worker] [INFO] git pull
+[2026-03-13 05:05:30] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:05:30] [queue-worker] [INFO] Processing workorder: improve_fix_emoji_logs.md for agent gemini-2.5-pro
+[2026-03-13 05:05:30] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 05:05:31] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_fix_emoji_logs-1773396330\repo (depth=1)
+[2026-03-13 05:05:31] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_fix_emoji_logs-1773396330\repo
+[2026-03-13 05:05:31] [queue-worker] [INFO] Clone path (relative): tmp/clones/gemini-2.5-pro/improve_fix_emoji_logs-1773396330/repo
+[2026-03-13 05:05:31] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 05:05:31] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py
+[2026-03-13 05:05:31] [queue-worker] [INFO] Spawning agent gemini-2.5-pro (cwd=C:\csc)
+[2026-03-13 05:05:32] [queue-worker] [INFO] Agent spawned: PID=61820
+[2026-03-13 05:06:53] [queue-worker] [INFO] Agent exited: PID=61820, return_code=1
+[2026-03-13 05:06:53] [queue-worker] [INFO] Agent gemini-2.5-pro finished for improve_fix_emoji_logs.md with return code 1
+[2026-03-13 05:06:53] [queue-worker] [INFO] INCOMPLETE: improve_fix_emoji_logs.md -> ready/
+[2026-03-13 05:06:53] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:06:53] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773396331_improve_fix_emoji_logs.log
+[2026-03-13 05:06:53] [queue-worker] [INFO] Archived clone to repo-consumed-1773396413
+[2026-03-13 05:06:53] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:06:54] [queue-worker] [INFO] git commit: feat: Complete prompt 'improve_fix_emoji_logs.md'
+[2026-03-13 05:06:54] [queue-worker] [INFO] git push
+[2026-03-13 05:06:56] [queue-worker] [INFO] Cycle end (ready -> self-cycling)
+[2026-03-13 05:08:03] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:08:03] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:08:03] [queue-worker] [INFO] git pull
+[2026-03-13 05:08:04] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:08:04] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:08:04] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:08:04] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:08:04] [queue-worker] [INFO] git pull
+[2026-03-13 05:08:05] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:08:05] [queue-worker] [INFO] Processing workorder: improve_fix_emoji_logs.md for agent sonnet
+[2026-03-13 05:08:05] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 05:08:05] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\sonnet\improve_fix_emoji_logs-1773396485\repo (depth=1)
+[2026-03-13 05:08:06] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\sonnet\improve_fix_emoji_logs-1773396485\repo
+[2026-03-13 05:08:06] [queue-worker] [INFO] Clone path (relative): tmp/clones/sonnet/improve_fix_emoji_logs-1773396485/repo
+[2026-03-13 05:08:06] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 05:08:06] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\sonnet\bin\run_agent.py
+[2026-03-13 05:08:06] [queue-worker] [INFO] Spawning agent sonnet (cwd=C:\csc)
+[2026-03-13 05:08:06] [queue-worker] [INFO] Agent spawned: PID=54956
+[2026-03-13 05:08:09] [queue-worker] [INFO] Agent exited: PID=54956, return_code=1
+[2026-03-13 05:08:09] [queue-worker] [INFO] Agent sonnet finished for improve_fix_emoji_logs.md with return code 1
+[2026-03-13 05:08:09] [queue-worker] [INFO] INCOMPLETE: improve_fix_emoji_logs.md -> ready/
+[2026-03-13 05:08:09] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:08:09] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773396486_improve_fix_emoji_logs.log
+[2026-03-13 05:08:09] [queue-worker] [INFO] Archived clone to repo-consumed-1773396489
+[2026-03-13 05:08:09] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:08:10] [queue-worker] [INFO] git commit: feat: Complete prompt 'improve_fix_emoji_logs.md'
+[2026-03-13 05:08:10] [queue-worker] [INFO] git push
+[2026-03-13 05:08:11] [queue-worker] [INFO] Cycle end (ready -> self-cycling)
+[2026-03-13 05:09:19] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:09:19] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:09:19] [queue-worker] [INFO] git pull
+[2026-03-13 05:09:20] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:09:20] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:09:20] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:09:20] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:09:20] [queue-worker] [INFO] git pull
+[2026-03-13 05:09:21] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:09:21] [queue-worker] [INFO] Processing workorder: <task>.md for agent opus
+[2026-03-13 05:09:21] [queue-worker] [ERROR] Workorder file not found: C:\csc\ops\wo\wip\<task>.md
+[2026-03-13 05:09:21] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:10:27] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:10:27] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:10:27] [queue-worker] [INFO] git pull
+[2026-03-13 05:10:29] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:10:29] [queue-worker] [INFO] Processing workorder: <task>.md for agent opus
+[2026-03-13 05:10:29] [queue-worker] [ERROR] Workorder file not found: C:\csc\ops\wo\wip\<task>.md
+[2026-03-13 05:10:29] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:10:29] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:10:29] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:10:29] [queue-worker] [INFO] git pull
+[2026-03-13 05:10:30] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:10:30] [queue-worker] [INFO] Processing workorder: <task>.md for agent opus
+[2026-03-13 05:10:30] [queue-worker] [ERROR] Workorder file not found: C:\csc\ops\wo\wip\<task>.md
+[2026-03-13 05:10:30] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:11:38] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:11:38] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:11:38] [queue-worker] [INFO] git pull
+[2026-03-13 05:11:39] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:11:39] [queue-worker] [INFO] Processing workorder: <task>.md for agent opus
+[2026-03-13 05:11:39] [queue-worker] [ERROR] Workorder file not found: C:\csc\ops\wo\wip\<task>.md
+[2026-03-13 05:11:39] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:11:39] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:11:39] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:11:39] [queue-worker] [INFO] git pull
+[2026-03-13 05:11:41] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:11:41] [queue-worker] [INFO] Processing workorder: IRC_FEATURES_QUOTE_AUTOOP_MODES_Q.md for agent gemini-2.5-pro
+[2026-03-13 05:11:41] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 05:11:41] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\gemini-2.5-pro\IRC_FEATURES_QUOTE_AUTOOP_MODES_Q-1773396701\repo (depth=1)
+[2026-03-13 05:11:42] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\gemini-2.5-pro\IRC_FEATURES_QUOTE_AUTOOP_MODES_Q-1773396701\repo
+[2026-03-13 05:11:42] [queue-worker] [INFO] Clone path (relative): tmp/clones/gemini-2.5-pro/IRC_FEATURES_QUOTE_AUTOOP_MODES_Q-1773396701/repo
+[2026-03-13 05:11:42] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 05:11:42] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py
+[2026-03-13 05:11:42] [queue-worker] [INFO] Spawning agent gemini-2.5-pro (cwd=C:\csc)
+[2026-03-13 05:11:42] [queue-worker] [INFO] Agent spawned: PID=35092
+[2026-03-13 05:12:21] [queue-worker] [INFO] Agent exited: PID=35092, return_code=0
+[2026-03-13 05:12:21] [queue-worker] [INFO] Agent gemini-2.5-pro finished for IRC_FEATURES_QUOTE_AUTOOP_MODES_Q.md with return code 0
+[2026-03-13 05:12:21] [queue-worker] [INFO] COMPLETE: IRC_FEATURES_QUOTE_AUTOOP_MODES_Q.md -> done/
+[2026-03-13 05:12:21] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:12:21] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773396702_IRC_FEATURES_QUOTE_AUTOOP_MODES_Q.log
+[2026-03-13 05:12:21] [queue-worker] [INFO] Nothing to commit in C:\csc\tmp\clones\gemini-2.5-pro\IRC_FEATURES_QUOTE_AUTOOP_MODES_Q-1773396701\repo (gemini-2.5-pro clone)
+[2026-03-13 05:12:21] [queue-worker] [INFO] Moved successful agent repo to trash: repo
+[2026-03-13 05:12:21] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:12:22] [queue-worker] [INFO] git commit: feat: Complete prompt 'IRC_FEATURES_QUOTE_AUTOOP_MODES_Q.md'
+[2026-03-13 05:12:22] [queue-worker] [INFO] git push
+[2026-03-13 05:12:23] [queue-worker] [INFO] Cycling PM...
+[2026-03-13 05:12:23] [queue-worker] [INFO] PM cycle complete
+[2026-03-13 05:12:23] [queue-worker] [INFO] Cycle end (done -> cycling PM and self)
+[2026-03-13 05:13:31] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:13:31] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:13:31] [queue-worker] [INFO] git pull
+[2026-03-13 05:13:32] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:13:32] [queue-worker] [INFO] Processing workorder: improve_add_channel_locking.md for agent gemini-2.5-pro
+[2026-03-13 05:13:32] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 05:13:32] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_add_channel_locking-1773396812\repo (depth=1)
+[2026-03-13 05:13:33] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_add_channel_locking-1773396812\repo
+[2026-03-13 05:13:33] [queue-worker] [INFO] Clone path (relative): tmp/clones/gemini-2.5-pro/improve_add_channel_locking-1773396812/repo
+[2026-03-13 05:13:33] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 05:13:33] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py
+[2026-03-13 05:13:33] [queue-worker] [INFO] Spawning agent gemini-2.5-pro (cwd=C:\csc)
+[2026-03-13 05:13:33] [queue-worker] [INFO] Agent spawned: PID=61092
+[2026-03-13 05:17:36] [queue-worker] [INFO] Agent exited: PID=61092, return_code=0
+[2026-03-13 05:17:36] [queue-worker] [INFO] Agent gemini-2.5-pro finished for improve_add_channel_locking.md with return code 0
+[2026-03-13 05:17:36] [queue-worker] [INFO] INCOMPLETE: improve_add_channel_locking.md -> ready/
+[2026-03-13 05:17:36] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:17:36] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773396813_improve_add_channel_locking.log
+[2026-03-13 05:17:36] [queue-worker] [INFO] Archived clone to repo-consumed-1773397056
+[2026-03-13 05:17:36] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:17:36] [queue-worker] [INFO] git commit: feat: Complete prompt 'improve_add_channel_locking.md'
+[2026-03-13 05:17:36] [queue-worker] [INFO] git push
+[2026-03-13 05:17:37] [queue-worker] [INFO] Cycle end (ready -> self-cycling)
+[2026-03-13 05:17:37] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:17:37] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:17:37] [queue-worker] [INFO] git pull
+[2026-03-13 05:17:38] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:17:38] [queue-worker] [INFO] Processing workorder: improve_add_channel_locking.md for agent gemini-2.5-pro
+[2026-03-13 05:17:38] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 05:17:38] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_add_channel_locking-1773397058\repo (depth=1)
+[2026-03-13 05:17:40] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\gemini-2.5-pro\improve_add_channel_locking-1773397058\repo
+[2026-03-13 05:17:40] [queue-worker] [INFO] Clone path (relative): tmp/clones/gemini-2.5-pro/improve_add_channel_locking-1773397058/repo
+[2026-03-13 05:17:40] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 05:17:40] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py
+[2026-03-13 05:17:40] [queue-worker] [INFO] Spawning agent gemini-2.5-pro (cwd=C:\csc)
+[2026-03-13 05:17:40] [queue-worker] [INFO] Agent spawned: PID=17632
+[2026-03-13 05:19:24] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:19:24] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:19:24] [queue-worker] [INFO] git pull
+[2026-03-13 05:19:25] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:19:25] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:19:25] [queue-worker] [INFO] Agent exited: PID=17632, return_code=0
+[2026-03-13 05:19:25] [queue-worker] [INFO] Agent gemini-2.5-pro finished for improve_add_channel_locking.md with return code 0
+[2026-03-13 05:19:25] [queue-worker] [INFO] INCOMPLETE: improve_add_channel_locking.md -> ready/
+[2026-03-13 05:19:25] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:19:25] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773397060_improve_add_channel_locking.log
+[2026-03-13 05:19:25] [queue-worker] [INFO] Archived clone to repo-consumed-1773397165
+[2026-03-13 05:19:25] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:19:26] [queue-worker] [INFO] git commit: feat: Complete prompt 'improve_add_channel_locking.md'
+[2026-03-13 05:19:26] [queue-worker] [INFO] git push
+[2026-03-13 05:19:27] [queue-worker] [INFO] Cycle end (ready -> self-cycling)
+[2026-03-13 05:20:35] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:20:35] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:20:35] [queue-worker] [INFO] git pull
+[2026-03-13 05:20:36] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:20:36] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:20:36] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:20:36] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:20:36] [queue-worker] [INFO] git pull
+[2026-03-13 05:20:37] [queue-worker] [INFO] Scanned 1 pending workorders from all agents
+[2026-03-13 05:20:37] [queue-worker] [INFO] Processing workorder: improve_add_channel_locking.md for agent sonnet
+[2026-03-13 05:20:37] [queue-worker] [INFO] Moved orders.md: queue/in/ -> queue/work/
+[2026-03-13 05:20:37] [queue-worker] [INFO] Cloning irc.git to C:\csc\tmp\clones\sonnet\improve_add_channel_locking-1773397237\repo (depth=1)
+[2026-03-13 05:20:39] [queue-worker] [INFO] Cloned irc.git to C:\csc\tmp\clones\sonnet\improve_add_channel_locking-1773397237\repo
+[2026-03-13 05:20:39] [queue-worker] [INFO] Clone path (relative): tmp/clones/sonnet/improve_add_channel_locking-1773397237/repo
+[2026-03-13 05:20:39] [queue-worker] [INFO] Injected template vars into orders.md
+[2026-03-13 05:20:39] [queue-worker] [INFO] Using agent-specific script: C:\csc\ops\agents\sonnet\bin\run_agent.py
+[2026-03-13 05:20:39] [queue-worker] [INFO] Spawning agent sonnet (cwd=C:\csc)
+[2026-03-13 05:20:39] [queue-worker] [INFO] Agent spawned: PID=16832
+[2026-03-13 05:20:41] [queue-worker] [INFO] ==================================================
+[2026-03-13 05:20:41] [queue-worker] [INFO] Cycle start
+[2026-03-13 05:20:41] [queue-worker] [INFO] git pull
+[2026-03-13 05:20:43] [queue-worker] [INFO] Scanned 0 pending workorders from all agents
+[2026-03-13 05:20:43] [queue-worker] [INFO] Cycle end (idle)
+[2026-03-13 05:20:43] [queue-worker] [INFO] Agent exited: PID=16832, return_code=1
+[2026-03-13 05:20:43] [queue-worker] [INFO] Agent sonnet finished for improve_add_channel_locking.md with return code 1
+[2026-03-13 05:20:43] [queue-worker] [INFO] INCOMPLETE: improve_add_channel_locking.md -> ready/
+[2026-03-13 05:20:43] [queue-worker] [INFO] Moved orders.md from queue/work/ to queue/out/
+[2026-03-13 05:20:43] [queue-worker] [INFO] Copied agent log to queue/out/agent_1773397239_improve_add_channel_locking.log
+[2026-03-13 05:20:43] [queue-worker] [INFO] Archived clone to repo-consumed-1773397243
+[2026-03-13 05:20:43] [queue-worker] [WARN] refresh-maps not found, skipping
+[2026-03-13 05:20:43] [queue-worker] [INFO] git commit: feat: Complete prompt 'improve_add_channel_locking.md'
+[2026-03-13 05:20:43] [queue-worker] [INFO] git push
+[2026-03-13 05:20:44] [queue-worker] [INFO] Cycle end (ready -> self-cycling)
