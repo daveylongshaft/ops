@@ -30,3 +30,10 @@ Create 9 separate workorder files in ops/wo/ready/ for the following improvement
 - Keep workorders focused - one concern per file
 - Tag for assignment to: gemini, jules, or codex
 - PRs will be reviewed by anthropic (opus) in pr-review role
+START 2026-03-13 04:49:42 PID:42428
+Reading task requirements and exploring codebase structure
+Verified issues: duplicates at lines 1954/3497, 1981/3704, 2039/3750, 2046/3757; emoji found; 15 try blocks
+Creating workorder 1: Split server_message_handler.py
+Creating workorder 2: Delete duplicate handlers
+Creating workorder 3: Add locking to ChannelManager
+Creating workorder 4: Add error handling
