@@ -7,7 +7,7 @@ setlocal enableDelayedExpansion
 
 set AGENT_DIR=%~1
 set WO_FILENAME=%~2
-set WIP_RELATIVE_PATH=workorders/wip/%~2
+set WIP_RELATIVE_PATH=ops/wo/wip/%~2
 set TEMPLATE_PATH=%AGENT_DIR%\orders.md-template
 
 echo usage: generate_orders_md.bat AGENT_DIR WO_FILENAME
