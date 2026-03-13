@@ -867,7 +867,14 @@ Read and complete this workorder:
 
     # Trigger queue-worker to process completion and pull next workorder
     try:
-        subprocess.run(["csc-ctl", "cycle", "queue-worker"], timeout=30, capture_output=True)
+        if sys.platform == "win32":
+            subprocess.run(["csc-ctl", "cycle", "queue-worker"],
+                         timeout=30, capture_output=True,
+                         creationflags=subprocess.CREATE_NO_WINDOW)
+        else:
+            subprocess.run(["csc-ctl", "cycle", "queue-worker"],
+                         timeout=30, capture_output=True,
+                         start_new_session=True)
     except Exception as e:
         print(f"[run_agent] Note: queue-worker trigger failed: {e}")
 

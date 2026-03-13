@@ -1,0 +1,63 @@
+[run_agent] Agent: gemini-2.5-pro, Root: C:\csc, WIP: improve_fix_emoji_logs.md
+[run_agent] Git pull to get work files...
+[run_agent] Git pull complete
+[run_agent] Starting Gemini (gemini-2.5-pro) for gemini-2.5-pro
+YOLO mode is enabled. All tool calls will be automatically approved.
+Loaded cached credentials.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Okay, I will complete the work order to replace Unicode emoji with ASCII equivalents. I'll start by outlining my plan.
+First, I'll search for non-ASCII characters in the directory.
+I'll `grep` for non-ASCII characters in Python files within the `irc/packages/csc-service/csc_service/` directory, using a pattern since recursive globs aren't supported.
+C:\Users\davey\AppData\Roaming\npm\node_modules\@google\gemini-cli\node_modules\@lydell\node-pty\conpty_console_list_agent.js:11
+var consoleProcessList = getConsoleProcessList(shellPid);
+                         ^
+
+Error: AttachConsole failed
+    at Object.<anonymous> (C:\Users\davey\AppData\Roaming\npm\node_modules\@google\gemini-cli\node_modules\@lydell\node-pty\conpty_console_list_agent.js:11:26)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.13.0
+Searching.
+`grep_search` timed out. I'll search `server_message_handler.py`, `server.py`, and `data.py` directly, beginning with `server_message_handler.py`.
+`grep_search` found non-ASCII in `server_message_handler.py`. I'll read the file to locate the emojis.
+Okay, I've reviewed the first 2000 lines of `server_message_handler.py`; now to find all emoji occurrences in the rest of the file.
+I've reviewed `irc/packages/csc-service/csc_service/server/server_message_handler.py`. The work order's emoji line numbers are off. The emoji appears on lines around 280 and 1000. I'll now search for "File upload blocked" to pinpoint the exact locations.
+Okay, emojis on lines 265 and 774 of `server_message_handler.py` need replacing. The policy comment is already present. I'll use the `replace` tool with `allow_multiple=true` to fix them.
+Replacing the emoji.
+C:\Users\davey\AppData\Roaming\npm\node_modules\@google\gemini-cli\node_modules\@lydell\node-pty\conpty_console_list_agent.js:11
+var consoleProcessList = getConsoleProcessList(shellPid);
+                         ^
+
+Error: AttachConsole failed
+    at Object.<anonymous> (C:\Users\davey\AppData\Roaming\npm\node_modules\@google\gemini-cli\node_modules\@lydell\node-pty\conpty_console_list_agent.js:11:26)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.13.0
+Traceback (most recent call last):
+  File "C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py", line 872, in <module>
+    main()
+    ~~~~^^
+  File "C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py", line 859, in main
+    rc = run_gemini(agent_name, model, user_prompt, csc_root)
+  File "C:\csc\ops\agents\gemini-2.5-pro\bin\run_agent.py", line 711, in run_gemini
+    sys.stdout.write(line)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6ab' in position 38: character maps to <undefined>
